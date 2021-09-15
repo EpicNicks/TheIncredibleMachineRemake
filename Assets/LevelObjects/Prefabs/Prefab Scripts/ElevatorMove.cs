@@ -1,12 +1,11 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider))]
+[RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(Animator))]
 public class ElevatorMove : MonoBehaviour
 {
-
     /*
      * strictly private fields
      */
@@ -19,14 +18,26 @@ public class ElevatorMove : MonoBehaviour
      * Editor Fields
      */
     [SerializeField]
-    private bool returnToOrigin = false;
+    [Range(0, 86400)]
+    [Tooltip("amount of time (in seconds) for the elevator to wait before departing to its destination")]
+    private float delaySeconds = 0.0f;
     [SerializeField]
+    [Range(0, 86400)]
+    [Tooltip("amount of time (in seconds) for the elevator to reach its destination")]
     private float moveSeconds = 1.0f;
     [SerializeField]
+    [Tooltip("Activating this will cause the elevator to return to its origin upon completing its travel")]
+    private bool returnToOrigin = false;
+    [SerializeField]
+    [Range(0, 86400)]
+    [Tooltip("amount of time (in seconds) for the elevator to return to its start point (only if return to origin is checked)")]
     private float returnSeconds = 1.0f;
     [SerializeField]
+    [Range(0, 86400)]
+    [Tooltip("amount of time (in seconds) for the elevator to wait before returning to its start point (only if return to origin is checked)")]
     private float waitToReturnSeconds = 0.5f;
     [SerializeField]
+    [Tooltip("The destination transform. Use any dummy GameObject.")]
     private Transform endPoint;
 
     private void OnCollisionEnter(Collision collision)
@@ -51,7 +62,7 @@ public class ElevatorMove : MonoBehaviour
 
     private IEnumerator FullMove()
     {
-        yield return MoveTowards(endPoint.position, moveSeconds, 0.0f);
+        yield return MoveTowards(endPoint.position, moveSeconds, delaySeconds);
         if (returnToOrigin)
         {
             yield return MoveTowards(startPoint.position, returnSeconds, waitToReturnSeconds);
