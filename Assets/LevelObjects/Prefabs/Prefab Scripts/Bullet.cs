@@ -11,7 +11,7 @@ public class Bullet : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.rigidbody.AddForce(collision.GetContact(0).normal * forceMuliplier, ForceMode.Impulse);
+            collision.rigidbody.AddForce(collision.GetContact(0).normal * -1 * forceMuliplier, ForceMode.Impulse);
         }
         if (collision.gameObject.name != "Gun")
         {
