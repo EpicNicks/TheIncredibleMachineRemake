@@ -1,7 +1,11 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(Collider))]
 public class Bullet : MonoBehaviour
 {
+    private Rigidbody rbod;
+
     [Tooltip("The constant speed the bullet moves at")]
     public float moveSpeed = 1.0f;
     [Tooltip("The amount of force to apply to the colliding object")]
@@ -19,8 +23,13 @@ public class Bullet : MonoBehaviour
         }
     }
 
+    private void Awake()
+    {
+        rbod = GetComponent<Rigidbody>();
+    }
+
     private void Update()
     {
-        transform.position += transform.rotation * Vector3.right * moveSpeed * Time.deltaTime;
+        rbod.MovePosition(rbod.position + transform.rotation * Vector3.right * moveSpeed * Time.deltaTime);
     }
 }

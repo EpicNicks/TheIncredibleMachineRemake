@@ -9,10 +9,10 @@ public class ElevatorMove : MonoBehaviour
     /*
      * strictly private fields
      */
+    private bool started = false;
     private bool completed = false;
-    private bool returning = false;
     private Transform startPoint;
-    private bool flag = false;
+    private Rigidbody rbod;
 
     /*
      * Editor Fields
@@ -42,7 +42,7 @@ public class ElevatorMove : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player") && endPoint)
+        if (endPoint && !started && !completed && collision.gameObject.CompareTag("Player"))
         {
             StartCoroutine(FullMove());
         }
@@ -54,19 +54,25 @@ public class ElevatorMove : MonoBehaviour
         {
             Debug.LogWarning("Elevator is missing an endpoint and will now function as a platform!");
         }
-        GameObject go = new GameObject($"{name}::startPoint");
+        GameObject go = new GameObject($"Elevator (Flat){{name = {name}}}::startPoint");
         go.transform.position = transform.position;
         go.transform.rotation = Quaternion.identity;
         startPoint = go.transform;
+
+        rbod = GetComponent<Rigidbody>();
     }
 
     private IEnumerator FullMove()
     {
+        started = true;
+
         yield return MoveTowards(endPoint.position, moveSeconds, delaySeconds);
         if (returnToOrigin)
         {
             yield return MoveTowards(startPoint.position, returnSeconds, waitToReturnSeconds);
         }
+
+        completed = true;
     }
 
     private IEnumerator MoveTowards(Vector3 target, float timeToMove, float pauseBefore = 0.0f)
@@ -76,7 +82,7 @@ public class ElevatorMove : MonoBehaviour
         float timeElapsed = 0.0f;
         while (!Mathf.Approximately(transform.position.magnitude, target.magnitude))
         {
-            transform.position = Vector3.Lerp(startPoint, target, timeElapsed / timeToMove);
+            rbod.MovePosition(Vector3.Lerp(startPoint, target, timeElapsed / timeToMove));
             timeElapsed += Time.deltaTime;
             yield return null;
         }
