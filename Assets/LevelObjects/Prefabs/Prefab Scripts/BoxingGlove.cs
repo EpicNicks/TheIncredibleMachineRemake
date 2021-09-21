@@ -10,6 +10,7 @@ public class BoxingGlove : MonoBehaviour
     public float punchForceMultiplier = 1.0f;
     private Transform startPoint;
     private Rigidbody rbod;
+    private AudioSource audioSource;
 
     [Tooltip("The destination the boxing glove will complete the punch at.")]
     public Transform punchDestination;
@@ -32,6 +33,8 @@ public class BoxingGlove : MonoBehaviour
     [Tooltip("The way the punch returns.")]
     public PunchMovement returnMoveType;
 
+    public AudioClip punchSound;
+
     private delegate Vector3 Move(Vector3 a, Vector3 b, float t);
     public enum PunchMovement
     {
@@ -52,6 +55,11 @@ public class BoxingGlove : MonoBehaviour
         startPoint = go.transform;
 
         rbod = GetComponent<Rigidbody>();
+        if (punchSound)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+            audioSource.clip = punchSound;
+        }
 
         nextPunchDelaySeconds = punchInitialDelaySeconds;
     }
@@ -117,6 +125,10 @@ public class BoxingGlove : MonoBehaviour
 
     private IEnumerator Punch(Vector3 target, float timeToMove, Move moveFunc)
     {
+        if (audioSource)
+        {
+            audioSource.Play();
+        }
         moveFunc ??= Vector3.Lerp;
         Vector3 startPoint = transform.position;
         float timeElapsed = 0.0f;
@@ -127,5 +139,10 @@ public class BoxingGlove : MonoBehaviour
             yield return null;
         }
         transform.position = target;
+
+        if (audioSource)
+        {
+            audioSource.Stop();
+        }
     }
 }

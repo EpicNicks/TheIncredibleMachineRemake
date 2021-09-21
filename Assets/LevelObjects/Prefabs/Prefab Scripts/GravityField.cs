@@ -1,16 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider))]
 public class GravityField : MonoBehaviour
 {
+    private AudioSource audioSource;
+
     [SerializeField]
     [Tooltip("Edit bounds by editing the box collider")]
     private BoxCollider col;
 
     [SerializeField]
     private float inverseGravityMultiplier = 1.0f;
+
+    public AudioClip gravityConstantSoundEffect;
+    public AudioClip gravityPullingSoundEffect;
 
     private void OnDrawGizmos()
     {
@@ -19,7 +22,13 @@ public class GravityField : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-
+        if (other.CompareTag("Player"))
+        {
+            if (gravityPullingSoundEffect)
+            {
+                audioSource.clip = gravityPullingSoundEffect;
+            }
+        }
     }
 
     private void OnTriggerStay(Collider other)
@@ -31,21 +40,27 @@ public class GravityField : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        
+        if (other.CompareTag("Player"))
+        {
+            audioSource.clip = gravityConstantSoundEffect;
+        }
     }
 
     private void Awake()
     {
         col.isTrigger = true;
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.clip = gravityConstantSoundEffect;
     }
 
-    // Start is called before the first frame update
     void Start()
     {
-
+        if (audioSource.clip)
+        {
+            audioSource.Play();
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
         
