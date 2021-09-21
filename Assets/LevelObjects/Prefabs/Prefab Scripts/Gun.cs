@@ -3,6 +3,8 @@ public class Gun : MonoBehaviour
 {
     private float fireTime = 0.0f;
 
+    [SerializeField]
+    private AudioClip fireSound;
     [Tooltip("Check this off to enable the gun to fire. Can be enabled from an external script.")]
     public bool startFiring = false;
     [SerializeField]
@@ -32,6 +34,7 @@ public class Gun : MonoBehaviour
 
     private void FireBullet()
     {
+        AudioSource.PlayClipAtPoint(fireSound, transform.position);
         Instantiate(bulletPrefab, transform.position, transform.rotation);
     }
 }

@@ -13,6 +13,7 @@ public class ElevatorMove : MonoBehaviour
     private bool completed = false;
     private Transform startPoint;
     private Rigidbody rbod;
+    private AudioSource audioSource;
 
     /*
      * Editor Fields
@@ -39,6 +40,8 @@ public class ElevatorMove : MonoBehaviour
     [SerializeField]
     [Tooltip("The destination transform. Use any dummy GameObject.")]
     private Transform endPoint;
+    [SerializeField]
+    private AudioClip elevatorMusic;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -60,6 +63,11 @@ public class ElevatorMove : MonoBehaviour
         startPoint = go.transform;
 
         rbod = GetComponent<Rigidbody>();
+        if (elevatorMusic)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+            audioSource.clip = elevatorMusic;
+        }
     }
 
     private IEnumerator FullMove()
@@ -77,6 +85,10 @@ public class ElevatorMove : MonoBehaviour
 
     private IEnumerator MoveTowards(Vector3 target, float timeToMove, float pauseBefore = 0.0f)
     {
+        if (audioSource)
+        {
+            audioSource.Play();
+        }
         Vector3 startPoint = transform.position;
         yield return new WaitForSeconds(pauseBefore);
         float timeElapsed = 0.0f;
@@ -87,5 +99,9 @@ public class ElevatorMove : MonoBehaviour
             yield return null;
         }
         transform.position = target;
+        if (audioSource)
+        {
+            audioSource.Stop();
+        }
     }
 }
