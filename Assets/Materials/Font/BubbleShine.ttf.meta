@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 39f856aafd4fa4258a88dd4e3a14d332
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Bubble Shine
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 430a71c024cf945b795f6a3582013a47, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
