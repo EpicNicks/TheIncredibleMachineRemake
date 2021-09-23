@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 193095323532760463}
   - component: {fileID: 193095323532760466}
+  - component: {fileID: 7726207549288577018}
   - component: {fileID: 193095323532760462}
   - component: {fileID: 193095323532760457}
   - component: {fileID: 193095323532760456}
-  - component: {fileID: 193095323532760461}
   - component: {fileID: 193095323532760460}
   m_Layer: 0
   m_Name: Moving Belt
@@ -50,6 +50,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   reverseDirection: 0
   pushSpeed: 3
+--- !u!114 &7726207549288577018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193095323532760459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78802587c2f1eff4bb1d93a46cea591d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridGenerator: {fileID: 0}
+  toyDrawerSelector: {fileID: 0}
 --- !u!33 &193095323532760462
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -100,19 +114,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &193095323532760456
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 193095323532760459}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &193095323532760461
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

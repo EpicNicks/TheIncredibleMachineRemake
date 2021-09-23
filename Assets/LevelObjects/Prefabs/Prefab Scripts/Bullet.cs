@@ -17,10 +17,6 @@ public class Bullet : MonoBehaviour
         {
             collision.rigidbody.AddForce(collision.GetContact(0).normal * -1 * forceMuliplier, ForceMode.Impulse);
         }
-        if (collision.gameObject.name != "Gun")
-        {
-            Destroy(gameObject);
-        }
     }
 
     private void Awake()

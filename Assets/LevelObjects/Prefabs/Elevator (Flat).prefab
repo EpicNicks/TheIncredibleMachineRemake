@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8862739802886562812}
   - component: {fileID: 8862739802886562814}
+  - component: {fileID: 151560952860165585}
   - component: {fileID: 8862739802886562813}
   - component: {fileID: 8862739802886562810}
   - component: {fileID: 8862739802886562811}
@@ -48,11 +49,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d1031e8135e47741a4a976aa252fad9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  returnToOrigin: 1
+  delaySeconds: 0
   moveSeconds: 3
+  returnToOrigin: 1
   returnSeconds: 2
   waitToReturnSeconds: 1
   endPoint: {fileID: 0}
+  elevatorMusic: {fileID: 0}
+--- !u!114 &151560952860165585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8862739802886562808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78802587c2f1eff4bb1d93a46cea591d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridGenerator: {fileID: 0}
+  toyDrawerSelector: {fileID: 0}
 --- !u!33 &8862739802886562813
 MeshFilter:
   m_ObjectHideFlags: 0

@@ -34,7 +34,10 @@ public class Gun : MonoBehaviour
 
     private void FireBullet()
     {
-        AudioSource.PlayClipAtPoint(fireSound, transform.position);
+        if (fireSound)
+        {
+            AudioSource.PlayClipAtPoint(fireSound, transform.position);
+        }
         Instantiate(bulletPrefab, transform.position, transform.rotation);
     }
 }
