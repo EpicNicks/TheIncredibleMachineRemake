@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Collider))]
-public class GravityField : MonoBehaviour
+public class GravityField : Placeable
 {
     private AudioSource audioSource;
 
@@ -61,8 +61,5 @@ public class GravityField : MonoBehaviour
         }
     }
 
-    void Update()
-    {
-        
-    }
+    public override void Place(){}
 }

@@ -4,14 +4,14 @@ using UnityEngine;
 [RequireComponent(typeof(Collider))]
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(Animator))]
-public class ElevatorMove : MonoBehaviour
+public class ElevatorMove : Placeable
 {
     /*
      * strictly private fields
      */
     private bool started = false;
     private bool completed = false;
-    private Transform startPoint;
+    private Vector3 startPoint;
     private Rigidbody rbod;
     private AudioSource audioSource;
 
@@ -57,10 +57,7 @@ public class ElevatorMove : MonoBehaviour
         {
             Debug.LogWarning("Elevator is missing an endpoint and will now function as a platform!");
         }
-        GameObject go = new GameObject($"Elevator (Flat){{name = {name}}}::startPoint");
-        go.transform.position = transform.position;
-        go.transform.rotation = Quaternion.identity;
-        startPoint = go.transform;
+        startPoint = transform.position;
 
         rbod = GetComponent<Rigidbody>();
         if (elevatorMusic)
@@ -70,6 +67,11 @@ public class ElevatorMove : MonoBehaviour
         }
     }
 
+    public override void Place()
+    {
+        startPoint = transform.position;
+    }
+
     private IEnumerator FullMove()
     {
         started = true;
@@ -77,7 +79,7 @@ public class ElevatorMove : MonoBehaviour
         yield return MoveTowards(endPoint.position, moveSeconds, delaySeconds);
         if (returnToOrigin)
         {
-            yield return MoveTowards(startPoint.position, returnSeconds, waitToReturnSeconds);
+            yield return MoveTowards(startPoint, returnSeconds, waitToReturnSeconds);
         }
 
         completed = true;

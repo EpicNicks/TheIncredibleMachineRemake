@@ -36,7 +36,7 @@ public class ToyDrawerSelector : MonoBehaviour
         {
             Instantiated++;
             GameObject go = Instantiate(draggableWrapperPrefab, Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y)), Quaternion.identity);
-            DraggableWrapperGeneric wrapper = go.GetComponent<DraggableWrapperGeneric>();
+            DraggableWrapperGeneric wrapper = go.GetComponentInChildren<DraggableWrapperGeneric>();
             wrapper.enabled = true;
             wrapper.toyDrawerSelector = this;
             gridGenerator.displayGrid = true;

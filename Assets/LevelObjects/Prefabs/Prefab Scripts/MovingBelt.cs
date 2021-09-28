@@ -2,7 +2,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Collider))]
 [RequireComponent(typeof(Rigidbody))]
-public class MovingBelt : MonoBehaviour
+public class MovingBelt : Placeable
 {
     [SerializeField]
     [Tooltip("Check this if you want the belt to move right to left")]
@@ -20,4 +20,6 @@ public class MovingBelt : MonoBehaviour
     {
         collision.rigidbody.AddForce(Vector3.right * pushSpeed * (reverseDirection ? -1 : 1));
     }
+
+    public override void Place(){}
 }

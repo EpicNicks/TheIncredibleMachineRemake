@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   punchForceMultiplier: 10
-  punchDestination: {fileID: 0}
+  punchDisplacement: {x: 0, y: 3, z: 0}
   punchInitialDelaySeconds: 0
   punchDelaySeconds: 1
   punchSeconds: 0.2

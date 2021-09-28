@@ -1,5 +1,5 @@
 using UnityEngine;
-public class Gun : MonoBehaviour
+public class Gun : Placeable
 {
     private float fireTime = 0.0f;
 
@@ -31,6 +31,8 @@ public class Gun : MonoBehaviour
             fireTime += Time.deltaTime;
         }
     }
+
+    public override void Place(){}
 
     private void FireBullet()
     {

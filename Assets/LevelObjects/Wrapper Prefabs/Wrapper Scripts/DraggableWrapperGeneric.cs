@@ -5,12 +5,17 @@ public class DraggableWrapperGeneric : MonoBehaviour
     private bool dragging;
     public GridGenerator gridGenerator;
     public ToyDrawerSelector toyDrawerSelector;
+    public Placeable placeable;
 
     private void Awake()
     {
         if (gridGenerator == null)
         {
             gridGenerator = GameObject.Find("Grid").GetComponent<GridGenerator>();
+        }
+        if (placeable == null)
+        {
+            placeable = GetComponent<Placeable>();
         }
     }
 
@@ -41,6 +46,7 @@ public class DraggableWrapperGeneric : MonoBehaviour
                         dragging = false;
                         gridGenerator.displayGrid = false;
                         GetComponent<Collider>().enabled = true;
+                        placeable.Place();
                     }
                 }
                 else

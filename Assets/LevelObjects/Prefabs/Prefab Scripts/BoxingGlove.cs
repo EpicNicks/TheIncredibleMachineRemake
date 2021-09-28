@@ -3,17 +3,17 @@ using UnityEngine;
 
 [RequireComponent(typeof(Collider))]
 [RequireComponent(typeof(Rigidbody))]
-public class BoxingGlove : MonoBehaviour
+public class BoxingGlove : Placeable
 {
     private bool isPunching = false;
     private float nextPunchDelaySeconds;
     public float punchForceMultiplier = 1.0f;
-    private Transform startPoint;
+    private Vector3 startpoint;
     private Rigidbody rbod;
     private AudioSource audioSource;
 
     [Tooltip("The destination the boxing glove will complete the punch at.")]
-    public Transform punchDestination;
+    public Vector3 punchDisplacement;
     [Tooltip("The delay to launch the first punch if punchActivation is ON_TIMER.")]
     public float punchInitialDelaySeconds = 0.0f;
     [Tooltip("The delay to launch a punch inbetween punches if punchActivation is ON_TIMER.")]
@@ -49,27 +49,18 @@ public class BoxingGlove : MonoBehaviour
 
     private void Awake()
     {
-        GameObject go = new GameObject($"BoxingGlove{{name = {name}}}::StartingPoint");
-        go.transform.position = transform.position;
-        go.transform.rotation = transform.rotation;
-        startPoint = go.transform;
-
         rbod = GetComponent<Rigidbody>();
         if (punchSound)
         {
             audioSource = gameObject.AddComponent<AudioSource>();
             audioSource.clip = punchSound;
         }
-
-        nextPunchDelaySeconds = punchInitialDelaySeconds;
     }
 
     private void Start()
     {
-        if (punchDestination == null)
-        {
-            Debug.LogWarning($"Warning! BoxingGlove{{name = {name}}}::punchDestination is null and the boxing glove will not move!");
-        }
+        startpoint = transform.position;
+        nextPunchDelaySeconds = punchInitialDelaySeconds;
     }
 
     private void Update()
@@ -92,9 +83,15 @@ public class BoxingGlove : MonoBehaviour
             collision.rigidbody.AddForce(-collision.GetContact(0).normal * punchForceMultiplier, ForceMode.Impulse);
             if (!isPunching && punchActivation == PunchActivation.ON_PLAYER_CONTACT)
             {
+                isPunching = true;
                 StartCoroutine(FullPunch());
             }
         }
+    }
+
+    public override void Place()
+    {
+        startpoint = transform.position;
     }
 
     private Move PunchMovementFunc(PunchMovement pm) => pm switch
@@ -106,21 +103,11 @@ public class BoxingGlove : MonoBehaviour
 
     private IEnumerator FullPunch()
     {
-        if (punchDestination == null)
-        {
-            yield return null;
-        }
-
         isPunching = true;
-        yield return Punch(punchDestination, punchSeconds, PunchMovementFunc(punchMoveType));
+        yield return Punch(startpoint + punchDisplacement, punchSeconds, PunchMovementFunc(punchMoveType));
         yield return new WaitForSeconds(punchStaySeconds);
-        yield return Punch(startPoint, punchReturnSeconds, PunchMovementFunc(returnMoveType));
+        yield return Punch(startpoint, punchReturnSeconds, PunchMovementFunc(returnMoveType));
         isPunching = false;
-    }
-
-    private IEnumerator Punch(Transform targetT, float timeToMove, Move moveFunc)
-    {
-        yield return Punch(targetT.position, timeToMove, moveFunc);
     }
 
     private IEnumerator Punch(Vector3 target, float timeToMove, Move moveFunc)
