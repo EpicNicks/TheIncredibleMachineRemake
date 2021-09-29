@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using System.Collections;
 using UnityEngine;
 
@@ -27,7 +29,8 @@ public class BoxingGlove : Placeable
     public float punchReturnSeconds = 1.5f;
     
     [Tooltip("The way the punch activates.")]
-    public PunchActivation punchActivation = PunchActivation.ON_PLAYER_CONTACT;
+    public PunchActivation punchActivation = PunchActivation.ON_CONTACT;
+    public List<string> collisionTags = new List<string> { "Player" };
     [Tooltip("The way the punch moves.")]
     public PunchMovement punchMoveType;
     [Tooltip("The way the punch returns.")]
@@ -43,7 +46,7 @@ public class BoxingGlove : Placeable
     }
     public enum PunchActivation
     {
-        ON_PLAYER_CONTACT,
+        ON_CONTACT,
         ON_TIMER
     }
 
@@ -78,10 +81,10 @@ public class BoxingGlove : Placeable
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collisionTags.Any(t => collision.gameObject.CompareTag(t)))
         {
             collision.rigidbody.AddForce(-collision.GetContact(0).normal * punchForceMultiplier, ForceMode.Impulse);
-            if (!isPunching && punchActivation == PunchActivation.ON_PLAYER_CONTACT)
+            if (!isPunching && punchActivation == PunchActivation.ON_CONTACT)
             {
                 isPunching = true;
                 StartCoroutine(FullPunch());

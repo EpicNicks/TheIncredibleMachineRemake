@@ -73,6 +73,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gridGenerator: {fileID: 0}
   toyDrawerSelector: {fileID: 0}
+  placeable: {fileID: 0}
 --- !u!33 &8110075103072519125
 MeshFilter:
   m_ObjectHideFlags: 0

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4589238269085973751}
   - component: {fileID: 5396787029812189647}
+  - component: {fileID: 5191093169490197149}
   - component: {fileID: 4589238269085973750}
   - component: {fileID: 4589238269085973745}
   - component: {fileID: 4589238269085973744}
@@ -50,6 +51,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gridGenerator: {fileID: 0}
   toyDrawerSelector: {fileID: 0}
+  placeable: {fileID: 5191093169490197149}
+--- !u!114 &5191093169490197149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4589238269085973747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5401adb9e05242a4d81c9870626dc3f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletSpawn: {fileID: 4589238270618421975}
+  fireSound: {fileID: 0}
+  startFiring: 0
+  shootType: 1
+  collisionTags:
+  - Player
+  fireCooldownSeconds: 1
+  onCollisionFireCooldownSeconds: 0.5
+  bulletPrefab: {fileID: 8813292502521872086, guid: 375e5a00d786a5748987186c13e04e8a, type: 3}
 --- !u!33 &4589238269085973750
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -124,7 +147,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -137,7 +160,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4589238270618421975}
-  - component: {fileID: 4589238270618421972}
   m_Layer: 6
   m_Name: BulletSpawn
   m_TagString: Untagged
@@ -159,19 +181,3 @@ Transform:
   m_Father: {fileID: 4589238269085973751}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4589238270618421972
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4589238270618421974}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5401adb9e05242a4d81c9870626dc3f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fireSound: {fileID: 0}
-  startFiring: 0
-  fireCooldownSeconds: 1
-  bulletPrefab: {fileID: 8813292502521872086, guid: 375e5a00d786a5748987186c13e04e8a, type: 3}
