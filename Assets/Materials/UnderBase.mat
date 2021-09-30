@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: UnderBase
-  m_Shader: {fileID: 4800000, guid: 264097a8051e97a4d9d828ac6f26c962, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: fc30e5b012778d64b9660fce8490ed26, type: 3}
   m_ShaderKeywords: _METALLICSPECGLOSSMAP _NORMALMAP _PARALLAXMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -32,6 +32,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - Texture2D_a633b831a0294c309575c8185be5b9c5:
+        m_Texture: {fileID: 2800000, guid: 6f97483ac043a784a87c52f7bc16f938, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 2800000, guid: e8de1e3ff46980d42a23b8292b6ae627, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -61,7 +65,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: e8de1e3ff46980d42a23b8292b6ae627, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6f97483ac043a784a87c52f7bc16f938, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -69,7 +73,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: fbc1fad5acde7ab4d9c858c2db31ba11, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -97,6 +101,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_6b7cb959e18e44d8babf017d8feb4a43: 0.1
+    - Vector1_6c4cb68e31d4461498639560dae107a1: 0.7
+    - Vector1_dcfc27093978496b8ea198a1dd8e4774: 32
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -135,6 +142,10 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
+    - Color_638b298730494bfeb2adcc1176ea198f: {r: 1, g: 1, b: 1, a: 0}
+    - Color_83e69b0d7a5c41c98cf728c6ed56c95c: {r: 0.5, g: 0.5, b: 0.5, a: 0}
+    - Color_bf1c3d4c5feb4cb58427f9f235bdbd6b: {r: 0.3679245, g: 0.3679245, b: 0.3679245, a: 0}
+    - Color_cdc1482c24c64c7a8ee0c14cbd1a0e53: {r: 1, g: 1, b: 1, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

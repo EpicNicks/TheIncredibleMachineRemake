@@ -3,7 +3,82 @@ guid: 3acb52285c06dad46b826039bfbdc078
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Barrel
+    second: {fileID: 2100000, guid: 465b749981c9b7a4bbe4246487ea6517, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Base
+    second: {fileID: 2100000, guid: c73382f93ecbced43ab56ae40e99c053, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Handle
+    second: {fileID: 2100000, guid: 739fc79b62fcdbb4292f3f8874f705e0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HandleCover
+    second: {fileID: 2100000, guid: 508dd5ad50e2b7848ba70d3e321b270f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: NailsTwo
+    second: {fileID: 2100000, guid: 8e3346c6e3c13134ba5d69695901c2aa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PatternFour_
+    second: {fileID: 2100000, guid: b4cef678b29927a4898b6969f703f03c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PatternOne_
+    second: {fileID: 2100000, guid: b4cef678b29927a4898b6969f703f03c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PatternThree
+    second: {fileID: 2100000, guid: b4cef678b29927a4898b6969f703f03c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PatternTwo
+    second: {fileID: 2100000, guid: b4cef678b29927a4898b6969f703f03c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RingOne
+    second: {fileID: 2100000, guid: 508dd5ad50e2b7848ba70d3e321b270f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RingTwo
+    second: {fileID: 2100000, guid: 508dd5ad50e2b7848ba70d3e321b270f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ringer
+    second: {fileID: 2100000, guid: 508dd5ad50e2b7848ba70d3e321b270f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RingerHolder
+    second: {fileID: 2100000, guid: 508dd5ad50e2b7848ba70d3e321b270f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Trigger
+    second: {fileID: 2100000, guid: 8e3346c6e3c13134ba5d69695901c2aa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TriggerHolder
+    second: {fileID: 2100000, guid: 508dd5ad50e2b7848ba70d3e321b270f, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
