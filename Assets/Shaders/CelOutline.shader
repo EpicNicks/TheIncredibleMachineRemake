@@ -1,5 +1,7 @@
 ﻿Shader "FlexibleCelShader/Cel Outline"
 {
+
+
 	Properties
 	{
 		_Color("Global Color Modifier", Color) = (1, 1, 1, 1)
