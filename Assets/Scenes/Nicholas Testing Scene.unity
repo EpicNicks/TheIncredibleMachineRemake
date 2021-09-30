@@ -281,17 +281,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!114 &799792822 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5743489776776873026, guid: 12aa87748e4e825468e933949111904c, type: 3}
-  m_PrefabInstance: {fileID: 1785572192}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09083608b108c5f4e8e645a369935a51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1285201551
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -684,10 +673,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 434189021989954922, guid: 4a89b67d7197b5b4c929ea0c3f1dcef5, type: 3}
-      propertyPath: gridGenerator
-      value: 
-      objectReference: {fileID: 799792822}
     - target: {fileID: 1623003850601196567, guid: 4a89b67d7197b5b4c929ea0c3f1dcef5, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -776,9 +761,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: ToySelectionCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 1623003851545213022, guid: 4a89b67d7197b5b4c929ea0c3f1dcef5, type: 3}
-      propertyPath: gridGenerator
-      value: 
-      objectReference: {fileID: 799792822}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a89b67d7197b5b4c929ea0c3f1dcef5, type: 3}

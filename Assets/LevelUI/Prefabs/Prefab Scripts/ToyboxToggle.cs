@@ -25,7 +25,7 @@ public class ToyboxToggle : MonoBehaviour
         startPos = new Vector3(toyboxPanelTransform.rect.width - buttonTransform.rect.width, 0);
         if (toyboxPanelTransform)
         {
-            toyboxPanelTransform.position += startPos;
+            toyboxPanelTransform.position += 2 * startPos;
         }
     }
 
@@ -33,11 +33,11 @@ public class ToyboxToggle : MonoBehaviour
     {
         if (isVisible)
         {
-            toyboxPanelTransform.position += startPos;
+            toyboxPanelTransform.position += 2 * startPos;
         }
         else
         {
-            toyboxPanelTransform.position -= startPos;
+            toyboxPanelTransform.position -= 2 * startPos;
         }
         isVisible = !isVisible;
     }

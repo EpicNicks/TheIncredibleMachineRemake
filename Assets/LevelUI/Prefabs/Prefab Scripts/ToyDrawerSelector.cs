@@ -28,6 +28,11 @@ public class ToyDrawerSelector : MonoBehaviour
             text = gameObject.GetComponentInChildren<TMPro.TextMeshProUGUI>();
         }
         text.text = amount.ToString();
+
+        if (gridGenerator == null)
+        {
+            gridGenerator = FindObjectOfType<GridGenerator>();
+        }
     }
 
     public void OnClick()
