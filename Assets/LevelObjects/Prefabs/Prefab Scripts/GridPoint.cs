@@ -8,10 +8,6 @@ public class GridPoint : MonoBehaviour
         get => placedObject;
         set
         {
-            if (placedObject)
-            {
-                Destroy(placedObject);
-            }
             placedObject = value;
         }
     }

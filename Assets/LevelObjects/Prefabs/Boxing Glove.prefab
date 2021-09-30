@@ -48,6 +48,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7431ace33b28f4eb83d9759c02999d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactible: 0
+  pulseSpeed: 1
   punchForceMultiplier: 10
   punchDisplacement: {x: 0, y: 3, z: 0}
   punchInitialDelaySeconds: 0
@@ -56,6 +58,8 @@ MonoBehaviour:
   punchStaySeconds: 0.5
   punchReturnSeconds: 1.5
   punchActivation: 0
+  collisionTags:
+  - Player
   punchMoveType: 1
   returnMoveType: 0
   punchSound: {fileID: 0}
@@ -71,6 +75,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78802587c2f1eff4bb1d93a46cea591d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dragging: 0
+  placedOn: {fileID: 0}
   gridGenerator: {fileID: 0}
   toyDrawerSelector: {fileID: 0}
   placeable: {fileID: 0}

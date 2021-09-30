@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class DraggableWrapperGeneric : MonoBehaviour
 {
-    private bool dragging;
+    public bool dragging;
+    public GridPoint placedOn;
+
     public GridGenerator gridGenerator;
     public ToyDrawerSelector toyDrawerSelector;
     public Placeable placeable;
@@ -31,7 +33,7 @@ public class DraggableWrapperGeneric : MonoBehaviour
         {
             transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Camera.main.transform.position.z));
 
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonUp(0))
             {
                 if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out RaycastHit hit, 1000))
                 {
@@ -40,11 +42,11 @@ public class DraggableWrapperGeneric : MonoBehaviour
                     {
                         GridPoint gp = hit.collider.GetComponent<GridPoint>();
                         gp.PlacedObject = gameObject;
+                        placedOn = gp;
 
                         transform.position = hit.transform.position;
                         transform.rotation = Quaternion.identity;
                         dragging = false;
-                        gridGenerator.displayGrid = false;
                         GetComponent<Collider>().enabled = true;
                         placeable.Place();
                     }
@@ -53,8 +55,18 @@ public class DraggableWrapperGeneric : MonoBehaviour
                 {
                     Destroy(gameObject);
                 }
+                gridGenerator.displayGrid = false;
             }
         }
+    }
+
+    public void ReGrab()
+    {
+        GetComponent<Collider>().enabled = false;
+        placeable.Unplace();
+        dragging = true;
+        placedOn.PlacedObject = null;
+        gridGenerator.displayGrid = true;
     }
 
     private void OnDestroy()

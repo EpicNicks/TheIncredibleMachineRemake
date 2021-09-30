@@ -62,6 +62,7 @@ public class BoxingGlove : Placeable
 
     private void Start()
     {
+        base.OnStart();
         startpoint = transform.position;
         nextPunchDelaySeconds = punchInitialDelaySeconds;
     }
@@ -77,6 +78,10 @@ public class BoxingGlove : Placeable
                 nextPunchDelaySeconds = punchDelaySeconds;
             }
         }
+    }
+    private void LateUpdate()
+    {
+        OnLateUpdate();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -94,7 +99,13 @@ public class BoxingGlove : Placeable
 
     public override void Place()
     {
+        base.Place();
         startpoint = transform.position;
+    }
+
+    public override void Unplace()
+    {
+        base.Unplace();
     }
 
     private Move PunchMovementFunc(PunchMovement pm) => pm switch
