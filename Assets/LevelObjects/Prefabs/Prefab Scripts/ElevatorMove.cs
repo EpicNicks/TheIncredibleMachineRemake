@@ -67,9 +67,25 @@ public class ElevatorMove : Placeable
         }
     }
 
+    private void Start()
+    {
+        base.OnStart();
+    }
+
+    private void LateUpdate()
+    {
+        OnLateUpdate();
+    }
+
     public override void Place()
     {
+        base.Place();
         startPoint = transform.position;
+    }
+
+    public override void Unplace()
+    {
+        base.Unplace();
     }
 
     private IEnumerator FullMove()

@@ -49,6 +49,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d1031e8135e47741a4a976aa252fad9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactible: 0
+  pulseSpeed: 1
   delaySeconds: 0
   moveSeconds: 3
   returnToOrigin: 1
@@ -68,8 +70,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78802587c2f1eff4bb1d93a46cea591d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dragging: 0
+  placedOn: {fileID: 0}
   gridGenerator: {fileID: 0}
   toyDrawerSelector: {fileID: 0}
+  placeable: {fileID: 0}
 --- !u!33 &8862739802886562813
 MeshFilter:
   m_ObjectHideFlags: 0

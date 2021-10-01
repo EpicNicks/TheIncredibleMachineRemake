@@ -21,5 +21,23 @@ public class MovingBelt : Placeable
         collision.rigidbody.AddForce(Vector3.right * pushSpeed * (reverseDirection ? -1 : 1));
     }
 
-    public override void Place(){}
+    private void Start()
+    {
+        base.OnStart();
+    }
+
+    private void LateUpdate()
+    {
+        OnLateUpdate();
+    }
+
+    public override void Place()
+    {
+        base.Place();
+    }
+
+    public override void Unplace()
+    {
+        base.Unplace();
+    }
 }

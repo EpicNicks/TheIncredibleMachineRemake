@@ -28,6 +28,11 @@ public class ToyDrawerSelector : MonoBehaviour
             text = gameObject.GetComponentInChildren<TMPro.TextMeshProUGUI>();
         }
         text.text = amount.ToString();
+
+        if (gridGenerator == null)
+        {
+            gridGenerator = FindObjectOfType<GridGenerator>();
+        }
     }
 
     public void OnClick()
@@ -37,6 +42,7 @@ public class ToyDrawerSelector : MonoBehaviour
             Instantiated++;
             GameObject go = Instantiate(draggableWrapperPrefab, Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y)), Quaternion.identity);
             DraggableWrapperGeneric wrapper = go.GetComponentInChildren<DraggableWrapperGeneric>();
+            go.GetComponent<Placeable>().interactable = true;
             wrapper.enabled = true;
             wrapper.toyDrawerSelector = this;
             gridGenerator.displayGrid = true;

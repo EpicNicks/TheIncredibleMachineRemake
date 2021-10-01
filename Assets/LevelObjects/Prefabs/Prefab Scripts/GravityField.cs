@@ -3,6 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(Collider))]
 public class GravityField : Placeable
 {
+    private bool fieldActive = false;
     private AudioSource audioSource;
 
     [SerializeField]
@@ -33,7 +34,7 @@ public class GravityField : Placeable
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (fieldActive && other.CompareTag("Player"))
         {
             other.attachedRigidbody.AddForce(-Physics.gravity * 2 * inverseGravityMultiplier);
         }
@@ -55,11 +56,27 @@ public class GravityField : Placeable
 
     void Start()
     {
+        base.OnStart();
         if (audioSource.clip)
         {
             audioSource.Play();
         }
     }
 
-    public override void Place(){}
+    private void LateUpdate()
+    {
+        OnLateUpdate();
+    }
+
+    public override void Place()
+    {
+        base.Place();
+        fieldActive = true;
+    }
+
+    public override void Unplace()
+    {
+        base.Unplace();
+        fieldActive = false;
+    }
 }

@@ -49,6 +49,11 @@ public class Gun : Placeable
         }
     }
 
+    private void Start()
+    {
+        base.OnStart();
+    }
+
     private void Update()
     {
         if (startFiring)
@@ -60,6 +65,11 @@ public class Gun : Placeable
             }
             fireTime += Time.deltaTime;
         }
+    }
+
+    private void LateUpdate()
+    {
+        OnLateUpdate();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -99,7 +109,17 @@ public class Gun : Placeable
         }
     }
 
-    public override void Place(){}
+    public override void Place()
+    {
+        base.Place();
+        startFiring = true;
+    }
+
+    public override void Unplace()
+    {
+        base.Unplace();
+        startFiring = false;
+    }
 
     private void FireBullet()
     {
