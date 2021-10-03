@@ -2,9 +2,11 @@ using UnityEngine;
 
 public class DraggableWrapperGeneric : MonoBehaviour
 {
+    [SerializeField]
+    private Collider col;
+
     public bool dragging;
     public GridPoint placedOn;
-
     public GridGenerator gridGenerator;
     public ToyDrawerSelector toyDrawerSelector;
     public Placeable placeable;
@@ -19,12 +21,18 @@ public class DraggableWrapperGeneric : MonoBehaviour
         {
             placeable = GetComponent<Placeable>();
         }
+        if (col == null)
+        {
+            col = GetComponent<Collider>();
+            if (col == null)
+                col = GetComponentInChildren<Collider>();
+        }
     }
 
     private void Start()
     {
         dragging = true;
-        GetComponent<Collider>().enabled = false;
+        col.enabled = false;
     }
 
     private void Update()
@@ -47,7 +55,7 @@ public class DraggableWrapperGeneric : MonoBehaviour
                         transform.position = hit.transform.position;
                         transform.rotation = Quaternion.identity;
                         dragging = false;
-                        GetComponent<Collider>().enabled = true;
+                        col.enabled = true;
                         placeable.Place();
                     }
                 }
@@ -62,7 +70,7 @@ public class DraggableWrapperGeneric : MonoBehaviour
 
     public void ReGrab()
     {
-        GetComponent<Collider>().enabled = false;
+        col.enabled = false;
         placeable.Unplace();
         dragging = true;
         placedOn.PlacedObject = null;

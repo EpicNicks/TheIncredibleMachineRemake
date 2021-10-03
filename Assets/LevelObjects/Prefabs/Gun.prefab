@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!64 &3715735653273397750
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321444461154744662}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4493585093827132993, guid: ec8c5a0bedf18f94aa059f9f6f25833e, type: 3}
 --- !u!1 &4589238269085973747
 GameObject:
   m_ObjectHideFlags: 0
@@ -12,7 +26,6 @@ GameObject:
   - component: {fileID: 5396787029812189647}
   - component: {fileID: 5191093169490197149}
   - component: {fileID: 4589238269085973750}
-  - component: {fileID: 4589238269085973744}
   - component: {fileID: 3996034100673171436}
   m_Layer: 6
   m_Name: Gun
@@ -86,19 +99,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4589238269085973747}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &4589238269085973744
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4589238269085973747}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &3996034100673171436
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -162,15 +162,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8323146173022687739, guid: 26e7c2d7423282e419f05253c0357caf, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.13107
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 8323146173022687739, guid: 26e7c2d7423282e419f05253c0357caf, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.13107
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 8323146173022687739, guid: 26e7c2d7423282e419f05253c0357caf, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.13107
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 8323146173022687739, guid: 26e7c2d7423282e419f05253c0357caf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -217,5 +217,10 @@ PrefabInstance:
 --- !u!4 &7674350620275157427 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8323146173022687739, guid: 26e7c2d7423282e419f05253c0357caf, type: 3}
+  m_PrefabInstance: {fileID: 1801726145883273288}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1321444461154744662 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 817318525192290590, guid: 26e7c2d7423282e419f05253c0357caf, type: 3}
   m_PrefabInstance: {fileID: 1801726145883273288}
   m_PrefabAsset: {fileID: 0}
