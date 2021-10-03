@@ -2185,7 +2185,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1736163259}
   m_Layer: 0
-  m_Name: Bowl
+  m_Name: bucket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
