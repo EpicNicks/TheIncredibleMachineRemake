@@ -26,6 +26,9 @@
         },
         {
             "m_Id": "6b7cb959e18e44d8babf017d8feb4a43"
+        },
+        {
+            "m_Id": "239ddad24a6b4e3a9fbd81440d754fc2"
         }
     ],
     "m_Keywords": [],
@@ -1446,6 +1449,29 @@
     },
     "m_DefaultValue": {
         "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    }
+}
+
+{
+    "m_SGVersion": 1,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector2ShaderProperty",
+    "m_ObjectId": "239ddad24a6b4e3a9fbd81440d754fc2",
+    "m_Guid": {
+        "m_GuidSerialized": "9aa185a9-eaa6-45b2-ac89-bb087811fcab"
+    },
+    "m_Name": "Speed",
+    "m_DefaultReferenceName": "Vector2_239ddad24a6b4e3a9fbd81440d754fc2",
+    "m_OverrideReferenceName": "",
+    "m_GeneratePropertyBlock": true,
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": {
+        "x": 2.0,
         "y": 0.0,
         "z": 0.0,
         "w": 0.0
