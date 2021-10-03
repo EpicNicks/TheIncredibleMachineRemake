@@ -42,10 +42,6 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene("IanTestMainScene");
     }
-    public void Options()
-    {
-        Debug.Log("Options");
-    }
     public void Quit()
     {
         Time.timeScale = 1f;
