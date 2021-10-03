@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections.Generic;
 
 public class ToyDrawerSelector : MonoBehaviour
 {
@@ -15,6 +14,9 @@ public class ToyDrawerSelector : MonoBehaviour
         }
     }
 
+    [SerializeField]
+    private Button btn;
+
     public GameObject draggableWrapperPrefab;
     [SerializeField]
     private int amount = 3;
@@ -23,6 +25,10 @@ public class ToyDrawerSelector : MonoBehaviour
 
     private void Awake()
     {
+        if (btn == null)
+        {
+            btn = GetComponent<Button>();
+        }
         if (text == null)
         {
             text = gameObject.GetComponentInChildren<TMPro.TextMeshProUGUI>();
@@ -47,6 +53,11 @@ public class ToyDrawerSelector : MonoBehaviour
             wrapper.toyDrawerSelector = this;
             gridGenerator.displayGrid = true;
         }
+    }
+
+    public void ToggleEnabled(bool enabled)
+    {
+        btn.enabled = enabled;
     }
 
 }

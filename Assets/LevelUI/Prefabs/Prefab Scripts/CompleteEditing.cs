@@ -31,6 +31,11 @@ public class CompleteEditing : MonoBehaviour
                 placeable.interactable = true;
             }
         }
+        ToyDrawerSelector[] selectors = FindObjectsOfType<ToyDrawerSelector>();
+        foreach (var selector in selectors)
+        {
+            selector.ToggleEnabled(true);
+        }
     }
 
     public void FinishedEditing()
@@ -40,6 +45,11 @@ public class CompleteEditing : MonoBehaviour
         foreach (var placeable in FindObjectsOfType<Placeable>())
         {
             placeable.interactable = false;
+        }
+        ToyDrawerSelector[] selectors = FindObjectsOfType<ToyDrawerSelector>();
+        foreach (var selector in selectors)
+        {
+            selector.ToggleEnabled(false);
         }
     }
 }

@@ -757,6 +757,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1623003850601197033, guid: 4a89b67d7197b5b4c929ea0c3f1dcef5, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1623003850601197035, guid: 4a89b67d7197b5b4c929ea0c3f1dcef5, type: 3}
       propertyPath: m_Name
       value: ToySelectionCanvas

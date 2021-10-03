@@ -4,8 +4,12 @@ using UnityEngine;
 [RequireComponent(typeof(Collider))]
 public class Bullet : MonoBehaviour
 {
-    private Rigidbody rbod;
 
+    private float killSeconds = 10.0f;
+    private float killTimer = 0.0f;
+
+    [SerializeField]
+    private Rigidbody rbod;
     [Tooltip("The constant speed the bullet moves at")]
     public float moveSpeed = 1.0f;
     [Tooltip("The amount of force to apply to the colliding object")]
@@ -21,11 +25,20 @@ public class Bullet : MonoBehaviour
 
     private void Awake()
     {
-        rbod = GetComponent<Rigidbody>();
+        if (rbod == null)
+        {
+            rbod = GetComponent<Rigidbody>();
+        }
     }
 
     private void Update()
     {
         rbod.MovePosition(rbod.position + transform.rotation * Vector3.right * moveSpeed * Time.deltaTime);
+
+        killTimer += Time.deltaTime;
+        if (killTimer >= killSeconds)
+        {
+            Destroy(gameObject);
+        }
     }
 }
