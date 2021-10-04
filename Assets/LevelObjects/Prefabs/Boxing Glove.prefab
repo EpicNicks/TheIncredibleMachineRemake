@@ -51,8 +51,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactable: 1
   pulseSpeed: 1
-  punchForceMultiplier: 10
-  punchDisplacement: {x: 0, y: 3, z: 0}
+  punchForceMultiplier: 75
+  punchDisplacement: {x: 3, y: 0, z: 0}
   punchInitialDelaySeconds: 0
   punchDelaySeconds: 1
   punchSeconds: 0.2
@@ -76,6 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78802587c2f1eff4bb1d93a46cea591d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  col: {fileID: 0}
   dragging: 0
   placedOn: {fileID: 0}
   gridGenerator: {fileID: 0}

@@ -85,10 +85,11 @@ MonoBehaviour:
   bulletSpawn: {fileID: 4589238270618421975}
   fireSound: {fileID: 0}
   startFiring: 0
-  shootType: 1
+  shootType: 0
   collisionType: 1
   collisionTags:
   - Player
+  - Trigger
   fireCooldownSeconds: 1
   onCollisionFireCooldownSeconds: 0.5
   bulletPrefab: {fileID: 8813292502521872086, guid: 375e5a00d786a5748987186c13e04e8a, type: 3}
