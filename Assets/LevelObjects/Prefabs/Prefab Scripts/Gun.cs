@@ -5,6 +5,7 @@ using System.Linq;
 public class Gun : Placeable
 {
     private float fireTime = 0.0f;
+    private Animator gunAnimator;
 
     [SerializeField]
     private Transform bulletSpawn;
@@ -51,6 +52,7 @@ public class Gun : Placeable
 
     private void Start()
     {
+        gunAnimator = GetComponentInChildren<Animator>();
         base.OnStart();
     }
 
@@ -123,6 +125,7 @@ public class Gun : Placeable
 
     private void FireBullet()
     {
+        gunAnimator.SetTrigger("isTriggered");
         if (fireSound)
         {
             AudioSource.PlayClipAtPoint(fireSound, bulletSpawn.position);
