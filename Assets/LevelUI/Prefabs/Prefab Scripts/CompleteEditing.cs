@@ -52,6 +52,8 @@ public class CompleteEditing : MonoBehaviour
 
     public void FinishedEditing()
     {
+        player.GetComponent<Rigidbody>().constraints |= RigidbodyConstraints.FreezePositionZ;
+
         Rigidbody[] rbods = FindObjectsOfType<Rigidbody>();
         foreach (var rbod in rbods)
         {
