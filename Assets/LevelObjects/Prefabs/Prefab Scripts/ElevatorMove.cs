@@ -1,4 +1,6 @@
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider))]
@@ -18,6 +20,8 @@ public class ElevatorMove : Placeable
     /*
      * Editor Fields
      */
+    [SerializeField]
+    private List<string> collisionTags = new List<string> { "Player" };
     [SerializeField]
     [Range(0, 86400)]
     [Tooltip("amount of time (in seconds) for the elevator to wait before departing to its destination")]
@@ -45,7 +49,7 @@ public class ElevatorMove : Placeable
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (endPoint && !started && !completed && collision.gameObject.CompareTag("Player"))
+        if (endPoint && !started && !completed && collisionTags.Any(t => collision.gameObject.CompareTag(t)))
         {
             StartCoroutine(FullMove());
         }
