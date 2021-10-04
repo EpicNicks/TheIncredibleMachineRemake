@@ -51,9 +51,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactable: 0
   pulseSpeed: 1
+  collisionTags:
+  - Player
   delaySeconds: 0
   moveSeconds: 3
-  returnToOrigin: 1
+  returnToOrigin: 0
   returnSeconds: 2
   waitToReturnSeconds: 1
   endPoint: {fileID: 0}
