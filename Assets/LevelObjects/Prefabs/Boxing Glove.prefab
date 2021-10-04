@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8110075103072519125}
   - component: {fileID: 8110075103072519115}
   - component: {fileID: 8110075103072519127}
+  - component: {fileID: 8492265655598720194}
   m_Layer: 0
   m_Name: Boxing Glove
   m_TagString: Untagged
@@ -28,14 +29,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8110075103072519114}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.7071068, y: 0.7071068, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 5649184116187358058}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 90}
 --- !u!114 &8110075103072519120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48,7 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7431ace33b28f4eb83d9759c02999d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactable: 0
+  interactable: 1
   pulseSpeed: 1
   punchForceMultiplier: 10
   punchDisplacement: {x: 0, y: 3, z: 0}
@@ -97,7 +98,7 @@ SphereCollider:
   m_GameObject: {fileID: 8110075103072519114}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -117,6 +118,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &8492265655598720194
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8110075103072519114}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.937342, y: 4.9131656, z: 3.493977}
+  m_Center: {x: -0.7095008, y: 2.6204703, z: -0.021962762}
 --- !u!1001 &5039157554627173380
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -171,18 +185,6 @@ PrefabInstance:
     - target: {fileID: 831829049728253806, guid: 051e82fe1d99a6847843f23b335a18ac, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 865246794171540710, guid: 051e82fe1d99a6847843f23b335a18ac, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.71
-      objectReference: {fileID: 0}
-    - target: {fileID: 865246794171540710, guid: 051e82fe1d99a6847843f23b335a18ac, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.39
-      objectReference: {fileID: 0}
-    - target: {fileID: 865246794171540710, guid: 051e82fe1d99a6847843f23b335a18ac, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.18
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 051e82fe1d99a6847843f23b335a18ac, type: 3}
