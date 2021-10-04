@@ -22,7 +22,7 @@ public class ToyboxToggle : MonoBehaviour
 
     private void Start()
     {
-        startPos = new Vector3(toyboxPanelTransform.rect.width - buttonTransform.rect.width, 0);
+        startPos = new Vector3(toyboxPanelTransform.rect.width - buttonTransform.rect.width + buttonTransform.rect.x, 0);
         Debug.Log(startPos);
         if (toyboxPanelTransform)
         {

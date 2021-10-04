@@ -668,7 +668,7 @@ PrefabInstance:
     - target: {fileID: 434189021989954922, guid: 4a89b67d7197b5b4c929ea0c3f1dcef5, type: 3}
       propertyPath: draggableWrapperPrefab
       value: 
-      objectReference: {fileID: 6633012023044787836, guid: 3229e2f905f303549a6d4b56427f0ddc, type: 3}
+      objectReference: {fileID: 8862739802886562808, guid: bdaed47f6d9ac4d4286d7bda80f5ae56, type: 3}
     - target: {fileID: 1623003850601196566, guid: 4a89b67d7197b5b4c929ea0c3f1dcef5, type: 3}
       propertyPath: m_PixelPerfect
       value: 1
