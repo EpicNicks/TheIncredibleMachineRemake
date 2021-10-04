@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7505631057717136495
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 4
 --- !u!21 &2100000
 Material:
   serializedVersion: 6
@@ -7,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: rail_arrows
+  m_Name: SeeSawBase
   m_Shader: {fileID: -6465566751694194690, guid: fc30e5b012778d64b9660fce8490ed26, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -92,7 +105,6 @@ Material:
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
-    - _DiffuseThreshold: 0.1
     - _DstBlend: 0
     - _EnvironmentReflections: 1
     - _GlossMapScale: 0
@@ -100,11 +112,9 @@ Material:
     - _GlossyReflections: 0
     - _Metallic: 0
     - _OcclusionStrength: 1
-    - _OutlineThickness: 0.1
     - _Parallax: 0.005
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Shininess: 1
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -114,7 +124,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - Color_638b298730494bfeb2adcc1176ea198f: {r: 1, g: 1, b: 1, a: 0}
-    - Color_83e69b0d7a5c41c98cf728c6ed56c95c: {r: 1, g: 0.39320755, b: 0.051886797, a: 0}
+    - Color_83e69b0d7a5c41c98cf728c6ed56c95c: {r: 0.5377358, g: 0.44863138, b: 0.28662333, a: 0}
     - Color_bf1c3d4c5feb4cb58427f9f235bdbd6b: {r: 0.3679245, g: 0.3679245, b: 0.3679245, a: 0}
     - Color_cdc1482c24c64c7a8ee0c14cbd1a0e53: {r: 1, g: 1, b: 1, a: 0}
     - Vector2_239ddad24a6b4e3a9fbd81440d754fc2: {r: 2, g: 0, b: 0, a: 0}
@@ -122,18 +132,4 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _UnlitColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_BuildTextureStacks: []
---- !u!114 &3362586420099797126
-MonoBehaviour:
-  m_ObjectHideFlags: 11
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 4
