@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 8862739802886562808}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 1, z: 3}
+  m_LocalScale: {x: 4, y: 0.5, z: 4}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d1031e8135e47741a4a976aa252fad9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactible: 0
+  interactable: 0
   pulseSpeed: 1
   delaySeconds: 0
   moveSeconds: 3
@@ -70,6 +70,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78802587c2f1eff4bb1d93a46cea591d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  col: {fileID: 0}
   dragging: 0
   placedOn: {fileID: 0}
   gridGenerator: {fileID: 0}
