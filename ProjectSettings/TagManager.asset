@@ -6,6 +6,7 @@ TagManager:
   tags:
   - GridPoint
   - BGM
+  - Trigger
   layers:
   - Default
   - TransparentFX

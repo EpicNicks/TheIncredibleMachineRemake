@@ -23,9 +23,10 @@ public class ToyboxToggle : MonoBehaviour
     private void Start()
     {
         startPos = new Vector3(toyboxPanelTransform.rect.width - buttonTransform.rect.width, 0);
+        Debug.Log(startPos);
         if (toyboxPanelTransform)
         {
-            toyboxPanelTransform.position += 2 * startPos;
+            toyboxPanelTransform.localPosition += startPos;
         }
     }
 
@@ -33,11 +34,11 @@ public class ToyboxToggle : MonoBehaviour
     {
         if (isVisible)
         {
-            toyboxPanelTransform.position += 2 * startPos;
+            toyboxPanelTransform.localPosition += startPos;
         }
         else
         {
-            toyboxPanelTransform.position -= 2 * startPos;
+            toyboxPanelTransform.localPosition -= startPos;
         }
         isVisible = !isVisible;
     }
