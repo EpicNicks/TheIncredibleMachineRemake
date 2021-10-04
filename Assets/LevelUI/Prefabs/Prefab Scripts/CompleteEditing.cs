@@ -17,6 +17,7 @@ public class CompleteEditing : MonoBehaviour
         {
             rbod.isKinematic = true;
         }
+        player = GameObject.Find("Player");
         playerStartPos = player.transform.position;
         
         unsettable.AddRange(FindObjectsOfType<Placeable>());
