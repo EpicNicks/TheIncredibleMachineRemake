@@ -19,7 +19,7 @@ public class GridGenerator : MonoBehaviour
     {
         foreach (Vector3 point in GenerateGridPoints())
         {
-            Gizmos.DrawSphere(point + new Vector3(transform.position.x, transform.position.y), gridPointSphereRadius);
+            Gizmos.DrawMesh(pointPrefab.GetComponent<MeshFilter>().sharedMesh, point + new Vector3(transform.position.x, transform.position.y), pointPrefab.transform.rotation, pointPrefab.transform.localScale);
         }
     }
 
@@ -29,11 +29,12 @@ public class GridGenerator : MonoBehaviour
         {
             gridParent = new GameObject("GridParent");
             gridParent.transform.parent = transform;
-            gridParent.transform.position = Vector3.zero;
+            gridParent.transform.localPosition = Vector3.zero;
             gridParent.SetActive(displayGrid);
             foreach (Vector3 point in GenerateGridPoints())
             {
-                gridPoints.Add(Instantiate(pointPrefab, point + gridParent.transform.position, gridParent.transform.rotation, gridParent.transform));
+                GameObject pointObject = Instantiate(pointPrefab, point + gridParent.transform.position, pointPrefab.transform.rotation, gridParent.transform);
+                gridPoints.Add(pointObject);
             }
         }
         else

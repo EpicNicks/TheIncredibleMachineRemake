@@ -949,7 +949,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh27062
+  m_Name: pb_Mesh36414
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1550,7 +1550,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6633012023044787825, guid: 3229e2f905f303549a6d4b56427f0ddc, type: 3}
       propertyPath: interactable
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6633012023044787825, guid: 3229e2f905f303549a6d4b56427f0ddc, type: 3}
       propertyPath: inverseGravityMultiplier
@@ -1761,6 +1761,10 @@ PrefabInstance:
     - target: {fileID: 8862739802886562814, guid: bdaed47f6d9ac4d4286d7bda80f5ae56, type: 3}
       propertyPath: interactable
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8862739802886562814, guid: bdaed47f6d9ac4d4286d7bda80f5ae56, type: 3}
+      propertyPath: destinationDistance.y
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdaed47f6d9ac4d4286d7bda80f5ae56, type: 3}

@@ -15,7 +15,7 @@ public class CompleteEditing : MonoBehaviour
         Rigidbody[] rbods = FindObjectsOfType<Rigidbody>();
         foreach (var rbod in rbods)
         {
-            rbod.isKinematic = true;
+            rbod.constraints = RigidbodyConstraints.FreezePosition;
         }
         player = GameObject.Find("Player");
         playerStartPos = player.transform.position;
@@ -26,10 +26,14 @@ public class CompleteEditing : MonoBehaviour
     public void UndoFinishedEditing()
     {
         player.transform.position = playerStartPos;
+        Rigidbody playerBody = player.GetComponent<Rigidbody>();
+        playerBody.velocity = Vector3.zero;
+        playerBody.angularVelocity = Vector3.zero;
+        
         Rigidbody[] rbods = FindObjectsOfType<Rigidbody>();
         foreach (var rbod in rbods)
         {
-            rbod.isKinematic = true;
+            rbod.constraints = RigidbodyConstraints.FreezePosition;
         }
         player.GetComponent<Rigidbody>().velocity = Vector3.zero;
         foreach (var placeable in FindObjectsOfType<Placeable>())
@@ -51,7 +55,7 @@ public class CompleteEditing : MonoBehaviour
         Rigidbody[] rbods = FindObjectsOfType<Rigidbody>();
         foreach (var rbod in rbods)
         {
-            rbod.isKinematic = false;
+            rbod.constraints = RigidbodyConstraints.None;
         }
         finishedEditingHandler?.Invoke(this, EventArgs.Empty);
         foreach (var placeable in FindObjectsOfType<Placeable>())

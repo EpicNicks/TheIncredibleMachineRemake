@@ -42,14 +42,14 @@ public class ElevatorMove : Placeable
     [Tooltip("amount of time (in seconds) for the elevator to wait before returning to its start point (only if return to origin is checked)")]
     private float waitToReturnSeconds = 0.5f;
     [SerializeField]
-    [Tooltip("The destination transform. Use any dummy GameObject.")]
-    private Transform endPoint;
+    [Tooltip("The destination distance.")]
+    private Vector3 destinationDistance;
     [SerializeField]
     private AudioClip elevatorMusic;
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (endPoint && !started && !completed && collisionTags.Any(t => collision.gameObject.CompareTag(t)))
+        if (!started && !completed && collisionTags.Any(t => collision.gameObject.CompareTag(t)))
         {
             StartCoroutine(FullMove());
         }
@@ -57,10 +57,6 @@ public class ElevatorMove : Placeable
 
     private void Awake()
     {
-        if (endPoint == null)
-        {
-            Debug.LogWarning("Elevator is missing an endpoint and will now function as a platform!");
-        }
         startPoint = transform.position;
 
         rbod = GetComponent<Rigidbody>();
@@ -96,7 +92,7 @@ public class ElevatorMove : Placeable
     {
         started = true;
 
-        yield return MoveTowards(endPoint.position, moveSeconds, delaySeconds);
+        yield return MoveTowards(startPoint + destinationDistance, moveSeconds, delaySeconds);
         if (returnToOrigin)
         {
             yield return MoveTowards(startPoint, returnSeconds, waitToReturnSeconds);
