@@ -19,4 +19,12 @@ public class LevelSelecting : MonoBehaviour
     {
         Debug.Log("level3");
     }
+    public void Level4()
+    {
+        Debug.Log("level4");
+    }
+    public void Level5()
+    {
+        Debug.Log("level5");
+    }
 }

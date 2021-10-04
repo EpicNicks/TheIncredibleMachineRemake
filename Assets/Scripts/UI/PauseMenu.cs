@@ -37,10 +37,10 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
-    public void Restrat()
+    public void Restart()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("IanTestMainScene");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void Quit()
     {
