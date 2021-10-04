@@ -186,9 +186,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24cd33f4b98c5284a96b5062ce6bb83e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  btn: {fileID: 0}
   draggableWrapperPrefab: {fileID: 4589238269085973747, guid: 62c95200fbf21934aa454c2fdc053a2a, type: 3}
   amount: 3
-  gridGenerator: {fileID: 5743489776776873026, guid: 12aa87748e4e825468e933949111904c, type: 3}
+  gridGenerator: {fileID: 0}
   text: {fileID: 1189124000108721685}
 --- !u!222 &1189124000337515420
 CanvasRenderer:
