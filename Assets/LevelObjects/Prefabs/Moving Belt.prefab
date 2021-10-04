@@ -52,7 +52,7 @@ MonoBehaviour:
   interactable: 0
   pulseSpeed: 1
   reverseDirection: 0
-  pushSpeed: 3
+  pushSpeed: 4
 --- !u!114 &7726207549288577018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,8 +131,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.6, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2.45, y: 0.25, z: 1}
+  m_Center: {x: 0, y: -0.04, z: 0}
 --- !u!54 &193095323532760460
 Rigidbody:
   m_ObjectHideFlags: 0
