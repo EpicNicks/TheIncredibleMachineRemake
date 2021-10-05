@@ -469,7 +469,7 @@ MonoBehaviour:
   returnSeconds: 1
   waitToReturnSeconds: 0
   destinationDistance: {x: -3, y: 0, z: 0}
-  elevatorMusic: {fileID: 0}
+  elevatorMusic: {fileID: 8300000, guid: 8d21914b99fddf8479622fd6770e49d1, type: 3}
 --- !u!114 &8962707858248016667
 MonoBehaviour:
   m_ObjectHideFlags: 0
