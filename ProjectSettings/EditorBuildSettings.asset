@@ -15,14 +15,14 @@ EditorBuildSettings:
     path: Assets/Scenes/IanTestMainScene.unity
     guid: 75e047452005f49d0ae8a12cb28d00fc
   - enabled: 1
-    path: Assets/Scenes/TestScenes/Level_1.unity
-    guid: 6b2ea9246ea4f424bb4374c69da24abf
-  - enabled: 1
     path: Assets/Scenes/TestScenes/Level_0.unity
     guid: 4c3eccc6f7bb2e24bbb6529c19247734
   - enabled: 1
     path: Assets/Scenes/TestScenes/Level_0_1.unity
     guid: 47360d24021549c43a117a9f87c49a94
+  - enabled: 1
+    path: Assets/Scenes/TestScenes/Level_1.unity
+    guid: 6b2ea9246ea4f424bb4374c69da24abf
   - enabled: 1
     path: Assets/Scenes/TestScenes/Levelb.unity
     guid: 6224f0c1761c907428feefb152012430
