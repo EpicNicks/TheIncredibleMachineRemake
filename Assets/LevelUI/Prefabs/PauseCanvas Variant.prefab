@@ -7,6 +7,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6966108574031787326, guid: 2111760f117a34f3f8ab2dd9e6b18a4d, type: 3}
+      propertyPath: m_UpdateMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966108574367808609, guid: 2111760f117a34f3f8ab2dd9e6b18a4d, type: 3}
+      propertyPath: m_UpdateMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966108574598986801, guid: 2111760f117a34f3f8ab2dd9e6b18a4d, type: 3}
+      propertyPath: m_UpdateMode
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6966108574990352017, guid: 2111760f117a34f3f8ab2dd9e6b18a4d, type: 3}
       propertyPath: m_ScaleFactor
       value: 1
@@ -17,7 +29,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6966108574990352018, guid: 2111760f117a34f3f8ab2dd9e6b18a4d, type: 3}
       propertyPath: m_Name
-      value: PauseCanvas
+      value: PauseCanvas Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6966108574990352047, guid: 2111760f117a34f3f8ab2dd9e6b18a4d, type: 3}
       propertyPath: m_Pivot.x
