@@ -90,8 +90,8 @@ MonoBehaviour:
   collisionTags:
   - Player
   - Trigger
-  fireCooldownSeconds: 1
-  onCollisionFireCooldownSeconds: 0.5
+  fireCooldownSeconds: 3
+  onCollisionFireCooldownSeconds: 3
   bulletPrefab: {fileID: 8813292502521872086, guid: 375e5a00d786a5748987186c13e04e8a, type: 3}
   muzzleFlash: {fileID: 3964530679979121420, guid: 43a23b56173ca0f4e8130baa1f10284a, type: 3}
   muzzleFlashSpawnTransform: {fileID: 3964530679979121411, guid: 43a23b56173ca0f4e8130baa1f10284a, type: 3}

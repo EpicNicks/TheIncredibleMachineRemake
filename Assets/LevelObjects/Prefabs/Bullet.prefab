@@ -47,8 +47,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 796c6014e62aa934f9924329f9087df3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rbod: {fileID: 0}
   moveSpeed: 50
-  forceMuliplier: 20
+  forceMuliplier: 10
+  impactEffect: {fileID: 0}
 --- !u!33 &6973178948231018134
 MeshFilter:
   m_ObjectHideFlags: 0
