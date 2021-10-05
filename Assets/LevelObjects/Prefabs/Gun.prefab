@@ -83,7 +83,7 @@ MonoBehaviour:
   interactable: 0
   pulseSpeed: 1
   bulletSpawn: {fileID: 4589238270618421975}
-  fireSound: {fileID: 0}
+  fireSound: {fileID: 8300000, guid: 9fe88e76adf123a4ba6a3f3267df1fa9, type: 3}
   startFiring: 0
   shootType: 0
   collisionType: 1

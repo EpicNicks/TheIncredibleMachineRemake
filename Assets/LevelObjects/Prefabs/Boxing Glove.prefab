@@ -77,7 +77,7 @@ MonoBehaviour:
   - Player
   punchMoveType: 1
   returnMoveType: 0
-  punchSound: {fileID: 0}
+  punchSound: {fileID: 8300000, guid: d07fb87403d393d46aa5ba5f3c0458f0, type: 3}
 --- !u!114 &775903121232563948
 MonoBehaviour:
   m_ObjectHideFlags: 0

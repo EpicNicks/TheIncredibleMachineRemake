@@ -50,7 +50,7 @@ MonoBehaviour:
   pulseSpeed: 1
   col: {fileID: 6633012023044787827}
   inverseGravityMultiplier: 1
-  gravityConstantSoundEffect: {fileID: 0}
+  gravityConstantSoundEffect: {fileID: 8300000, guid: 25632e2940d2d4647b07453a659b891f, type: 3}
   gravityPullingSoundEffect: {fileID: 0}
 --- !u!114 &-5706290750671795089
 MonoBehaviour:
