@@ -27,6 +27,11 @@ public class Gun : Placeable
     [Tooltip("The bullet GameObject to be instantiated by the gun")]
     private GameObject bulletPrefab;
 
+    [SerializeField]
+    private GameObject muzzleFlash;
+    [SerializeField]
+    private Transform muzzleFlashSpawnTransform;
+
     public enum ShootType
     {
         ON_CONTACT,
@@ -125,6 +130,10 @@ public class Gun : Placeable
 
     private void FireBullet()
     {
+        if (muzzleFlashSpawnTransform && muzzleFlash)
+        {
+            Instantiate(muzzleFlash, muzzleFlashSpawnTransform.position, muzzleFlashSpawnTransform.rotation);
+        }
         gunAnimator.SetTrigger("isTriggered");
         if (fireSound)
         {
