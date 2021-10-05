@@ -53,11 +53,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2383327459076593327, guid: d0231e070ba2c4b4e9a9eb69eb6b8064, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 19.5
+      value: 22.2
       objectReference: {fileID: 0}
     - target: {fileID: 2383327459179995489, guid: d0231e070ba2c4b4e9a9eb69eb6b8064, type: 3}
       propertyPath: m_Name
-      value: Fail Screen Canvas
+      value: Fail Screen Canvas Variant
       objectReference: {fileID: 0}
     - target: {fileID: 2383327459179995501, guid: d0231e070ba2c4b4e9a9eb69eb6b8064, type: 3}
       propertyPath: m_Pivot.x
