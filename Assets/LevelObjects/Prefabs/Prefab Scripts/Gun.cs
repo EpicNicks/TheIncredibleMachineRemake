@@ -58,7 +58,7 @@ public class Gun : Placeable
 
     private void Update()
     {
-        if (startFiring)
+        if (!interactable && startFiring)
         {
             if (shootType == ShootType.ON_TIMER && fireTime > fireCooldownSeconds)
             {

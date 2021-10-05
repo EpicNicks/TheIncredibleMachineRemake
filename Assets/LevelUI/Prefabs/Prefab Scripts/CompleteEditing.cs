@@ -24,7 +24,10 @@ public class CompleteEditing : MonoBehaviour
 
         //reset starter to original position
         starter = GameObject.Find("Starter");
-        starterPos = starter.transform.position;
+        if (starter)
+        {
+            starterPos = starter.transform.position;
+        }
         
         unsettable.AddRange(FindObjectsOfType<Placeable>());
     }
@@ -36,10 +39,13 @@ public class CompleteEditing : MonoBehaviour
         playerBody.velocity = Vector3.zero;
         playerBody.angularVelocity = Vector3.zero;
         
-        starter.transform.position = starterPos;
-        Rigidbody starterbody = starter.GetComponent<Rigidbody>();
-        starterbody.velocity = Vector3.zero;
-        starterbody.angularVelocity = Vector3.zero;
+        if (starter)
+        {
+            starter.transform.position = starterPos;
+            Rigidbody starterbody = starter.GetComponent<Rigidbody>();
+            starterbody.velocity = Vector3.zero;
+            starterbody.angularVelocity = Vector3.zero;
+        }
 
         Rigidbody[] rbods = FindObjectsOfType<Rigidbody>();
         foreach (var rbod in rbods)
@@ -47,7 +53,10 @@ public class CompleteEditing : MonoBehaviour
             rbod.constraints |= RigidbodyConstraints.FreezePosition;
         }
         player.GetComponent<Rigidbody>().velocity = Vector3.zero;
-        starter.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        if (starter)
+        {
+            starter.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        }
         foreach (var placeable in FindObjectsOfType<Placeable>())
         {
             if (!unsettable.Contains(placeable))
@@ -65,7 +74,10 @@ public class CompleteEditing : MonoBehaviour
     public void FinishedEditing()
     {
         player.GetComponent<Rigidbody>().constraints |= RigidbodyConstraints.FreezePositionZ;
-        starter.GetComponent<Rigidbody>().constraints |= RigidbodyConstraints.FreezePositionZ;
+        if (starter)
+        {
+            starter.GetComponent<Rigidbody>().constraints |= RigidbodyConstraints.FreezePositionZ;
+        }
 
         Rigidbody[] rbods = FindObjectsOfType<Rigidbody>();
         foreach (var rbod in rbods)

@@ -21,6 +21,7 @@ public class Bullet : MonoBehaviour
         {
             collision.rigidbody.AddForce(collision.GetContact(0).normal * -1 * forceMuliplier, ForceMode.Impulse);
         }
+        Destroy(gameObject);
     }
 
     private void Awake()
