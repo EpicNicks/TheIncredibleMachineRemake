@@ -37,6 +37,11 @@ public class BoxingGlove : Placeable
     [Tooltip("The way the punch returns.")]
     public PunchMovement returnMoveType;
 
+    [SerializeField]
+    private GameObject impactEffect;
+    [SerializeField]
+    private Transform impactEffectSpawnPoint;
+
     public AudioClip punchSound;
 
     private delegate Vector3 Move(Vector3 a, Vector3 b, float t);
@@ -119,6 +124,10 @@ public class BoxingGlove : Placeable
 
     private IEnumerator FullPunch()
     {
+        if (impactEffectSpawnPoint && impactEffect)
+        {
+            Instantiate(impactEffect, impactEffectSpawnPoint.position, impactEffectSpawnPoint.rotation);
+        }
         isPunching = true;
         yield return Punch(startpoint + punchDisplacement, punchSeconds, PunchMovementFunc(punchMoveType));
         yield return new WaitForSeconds(punchStaySeconds);

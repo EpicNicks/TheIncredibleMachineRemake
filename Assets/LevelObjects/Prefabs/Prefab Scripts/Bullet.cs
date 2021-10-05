@@ -15,11 +15,18 @@ public class Bullet : MonoBehaviour
     [Tooltip("The amount of force to apply to the colliding object")]
     public float forceMuliplier = 1.0f;
 
+    [SerializeField]
+    private GameObject impactEffect;
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             collision.rigidbody.AddForce(collision.GetContact(0).normal * -1 * forceMuliplier, ForceMode.Impulse);
+            if (impactEffect)
+            {
+                Instantiate(impactEffect, collision.GetContact(0).normal * -1, impactEffect.transform.rotation);
+            }
         }
         Destroy(gameObject);
     }
