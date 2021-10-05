@@ -43,14 +43,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8110075103072519114}
-  m_LocalRotation: {x: 0.7071068, y: 0.7071068, z: 0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 5649184116187358058}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8110075103072519120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77,6 +77,8 @@ MonoBehaviour:
   - Player
   punchMoveType: 1
   returnMoveType: 0
+  impactEffect: {fileID: 0}
+  impactEffectSpawnPoint: {fileID: 0}
   punchSound: {fileID: 8300000, guid: d07fb87403d393d46aa5ba5f3c0458f0, type: 3}
 --- !u!114 &775903121232563948
 MonoBehaviour:
