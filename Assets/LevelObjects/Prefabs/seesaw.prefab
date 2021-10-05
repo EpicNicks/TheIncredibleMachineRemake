@@ -14,7 +14,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 62
+  m_Constraints: 94
   m_CollisionDetection: 0
 --- !u!65 &4515916114198452599
 BoxCollider:
@@ -52,6 +52,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6841632775541358696}
+  - component: {fileID: 2054833310365960168}
+  - component: {fileID: 6936407969664469454}
   m_Layer: 0
   m_Name: seesaw
   m_TagString: Untagged
@@ -74,6 +76,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2054833310365960168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6841632775541358697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78802587c2f1eff4bb1d93a46cea591d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  col: {fileID: 0}
+  dragging: 0
+  placedOn: {fileID: 0}
+  gridGenerator: {fileID: 0}
+  toyDrawerSelector: {fileID: 0}
+  placeable: {fileID: 0}
+--- !u!114 &6936407969664469454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6841632775541358697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e907a452a11589c4d8459aaedb6ddcd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactable: 0
+  pulseSpeed: 1
 --- !u!1001 &1953019240254852798
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -99,11 +133,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1791198424589061096, guid: 44b85ccc7c0d2d84893695c8d96b9fc3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.000000029802
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1791198424589061096, guid: 44b85ccc7c0d2d84893695c8d96b9fc3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.00081956
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1791198424589061096, guid: 44b85ccc7c0d2d84893695c8d96b9fc3, type: 3}
       propertyPath: m_LocalRotation.w
