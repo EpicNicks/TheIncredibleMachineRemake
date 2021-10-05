@@ -226,6 +226,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6429545220269126170, guid: d526b3f2250584c23aabac5040b4e8dc, type: 3}
+      propertyPath: draggableWrapperPrefab
+      value: 
+      objectReference: {fileID: 8110075103072519114, guid: 4cfcb6492a085f446b019cad24e2de7b, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d526b3f2250584c23aabac5040b4e8dc, type: 3}
 --- !u!1001 &242120943

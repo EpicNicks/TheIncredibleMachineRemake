@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8110075103072519120}
   - component: {fileID: 775903121232563948}
   - component: {fileID: 8110075103072519125}
-  - component: {fileID: 8110075103072519115}
   - component: {fileID: 8110075103072519127}
   - component: {fileID: 8492265655598720194}
   m_Layer: 0
@@ -49,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7431ace33b28f4eb83d9759c02999d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactable: 1
+  interactable: 0
   pulseSpeed: 1
   punchForceMultiplier: 75
   punchDisplacement: {x: 3, y: 0, z: 0}
@@ -73,7 +72,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8110075103072519114}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78802587c2f1eff4bb1d93a46cea591d, type: 3}
   m_Name: 
@@ -92,19 +91,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8110075103072519114}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!135 &8110075103072519115
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8110075103072519114}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &8110075103072519127
 Rigidbody:
   m_ObjectHideFlags: 0

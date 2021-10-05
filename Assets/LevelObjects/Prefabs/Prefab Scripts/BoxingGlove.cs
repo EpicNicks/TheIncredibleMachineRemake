@@ -68,8 +68,8 @@ public class BoxingGlove : Placeable
 
     private void Start()
     {
-        boxAnimator = GetComponentInChildren<Animator>();
         base.OnStart();
+        boxAnimator = GetComponentInChildren<Animator>();
         startpoint = transform.position;
         nextPunchDelaySeconds = punchInitialDelaySeconds;
     }
