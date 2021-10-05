@@ -1027,6 +1027,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4124501163641314807, guid: 44311500a858621499523abe45dbeb44, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4124501163641314807, guid: 44311500a858621499523abe45dbeb44, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4685893005133306075, guid: 44311500a858621499523abe45dbeb44, type: 3}
       propertyPath: winningMenuUI
       value: 

@@ -28,6 +28,7 @@ public class WinningCondition : MonoBehaviour
 
         if (collision.gameObject.tag == "Player")
         {
+            Debug.Log("WON");
             isWon = true;
         }
     }
