@@ -762,11 +762,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2383327458023354988, guid: d0231e070ba2c4b4e9a9eb69eb6b8064, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2383327458023354988, guid: d0231e070ba2c4b4e9a9eb69eb6b8064, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadLevel
+      value: GoToNextLevel
       objectReference: {fileID: 0}
     - target: {fileID: 2383327458023354988, guid: d0231e070ba2c4b4e9a9eb69eb6b8064, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
