@@ -11929,6 +11929,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonTransform: {fileID: 4159993754961777829}
   toyboxPanelTransform: {fileID: 4159993756769794222}
+  leftArrow: {fileID: 21300000, guid: 4bc54c606676c4adba986d70ce510362, type: 3}
+  rightArrow: {fileID: 21300000, guid: 5d2c3f1ac09c1a848a66a5d60d038c82, type: 3}
 --- !u!114 &4159993754961777826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12013,7 +12015,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5d2c3f1ac09c1a848a66a5d60d038c82, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4bc54c606676c4adba986d70ce510362, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
