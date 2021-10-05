@@ -5,6 +5,8 @@ using System;
 public class CompleteEditing : MonoBehaviour
 {
     private GameObject player;
+    private GameObject starter;
+    private Vector3 starterPos;
     private Vector3 playerStartPos;
     private List<Placeable> unsettable = new List<Placeable>();
 
@@ -19,6 +21,10 @@ public class CompleteEditing : MonoBehaviour
         }
         player = GameObject.Find("Player");
         playerStartPos = player.transform.position;
+
+        //reset starter to original position
+        starter = GameObject.Find("Starter");
+        starterPos = starter.transform.position;
         
         unsettable.AddRange(FindObjectsOfType<Placeable>());
     }
@@ -30,12 +36,18 @@ public class CompleteEditing : MonoBehaviour
         playerBody.velocity = Vector3.zero;
         playerBody.angularVelocity = Vector3.zero;
         
+        starter.transform.position = starterPos;
+        Rigidbody starterbody = starter.GetComponent<Rigidbody>();
+        starterbody.velocity = Vector3.zero;
+        starterbody.angularVelocity = Vector3.zero;
+
         Rigidbody[] rbods = FindObjectsOfType<Rigidbody>();
         foreach (var rbod in rbods)
         {
             rbod.constraints |= RigidbodyConstraints.FreezePosition;
         }
         player.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        starter.GetComponent<Rigidbody>().velocity = Vector3.zero;
         foreach (var placeable in FindObjectsOfType<Placeable>())
         {
             if (!unsettable.Contains(placeable))
@@ -53,6 +65,7 @@ public class CompleteEditing : MonoBehaviour
     public void FinishedEditing()
     {
         player.GetComponent<Rigidbody>().constraints |= RigidbodyConstraints.FreezePositionZ;
+        starter.GetComponent<Rigidbody>().constraints |= RigidbodyConstraints.FreezePositionZ;
 
         Rigidbody[] rbods = FindObjectsOfType<Rigidbody>();
         foreach (var rbod in rbods)

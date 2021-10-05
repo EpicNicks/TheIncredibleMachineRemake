@@ -165,7 +165,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1623003850601196567
 RectTransform:
   m_ObjectHideFlags: 0
@@ -630,13 +630,17 @@ PrefabInstance:
       value: x 99
       objectReference: {fileID: 0}
     - target: {fileID: 1189124000337515410, guid: 936301c7d57523d438346a5a270fc3e0, type: 3}
+      propertyPath: amount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1189124000337515410, guid: 936301c7d57523d438346a5a270fc3e0, type: 3}
       propertyPath: gridGenerator
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1189124000337515410, guid: 936301c7d57523d438346a5a270fc3e0, type: 3}
       propertyPath: draggableWrapperPrefab
       value: 
-      objectReference: {fileID: 193095323532760459, guid: 319501a2bb46bcb4aaa65a824c725a59, type: 3}
+      objectReference: {fileID: 8862739802886562808, guid: bdaed47f6d9ac4d4286d7bda80f5ae56, type: 3}
     - target: {fileID: 1189124000337515417, guid: 936301c7d57523d438346a5a270fc3e0, type: 3}
       propertyPath: m_Name
       value: ToyDrawer
@@ -742,6 +746,10 @@ PrefabInstance:
     - target: {fileID: 1189124000108721685, guid: 936301c7d57523d438346a5a270fc3e0, type: 3}
       propertyPath: m_text
       value: x 99
+      objectReference: {fileID: 0}
+    - target: {fileID: 1189124000337515410, guid: 936301c7d57523d438346a5a270fc3e0, type: 3}
+      propertyPath: amount
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1189124000337515410, guid: 936301c7d57523d438346a5a270fc3e0, type: 3}
       propertyPath: gridGenerator
@@ -853,6 +861,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1623003851656099095}
     m_Modifications:
+    - target: {fileID: 1189124000337515410, guid: 936301c7d57523d438346a5a270fc3e0, type: 3}
+      propertyPath: draggableWrapperPrefab
+      value: 
+      objectReference: {fileID: 167019918789462772, guid: 97e951093b2daa642bb3d9ec54bba443, type: 3}
     - target: {fileID: 1189124000337515417, guid: 936301c7d57523d438346a5a270fc3e0, type: 3}
       propertyPath: m_Name
       value: ToyDrawer (2)
