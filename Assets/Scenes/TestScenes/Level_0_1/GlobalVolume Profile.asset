@@ -65,14 +65,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5485954d14dfb9a4c8ead8edb0ded5b1, type: 3}
   m_Name: LiftGammaGain
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   m_AdvancedMode: 0
   lift:
     m_OverrideState: 0
     m_Value: {x: 0.983504, y: 1, z: 0.99362165, w: 0}
   gamma:
     m_OverrideState: 0
-    m_Value: {x: 1, y: 0.9870432, z: 0.971759, w: 0}
+    m_Value: {x: 0.9531426, y: 1, z: 0.95602435, w: 0}
   gain:
     m_OverrideState: 0
     m_Value: {x: 0.9814951, y: 0.9936611, z: 1, w: 0}
@@ -303,7 +303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c01700fd266d6914ababb731e09af2eb, type: 3}
   m_Name: DepthOfField
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   m_AdvancedMode: 0
   mode:
     m_OverrideState: 1
@@ -369,10 +369,10 @@ MonoBehaviour:
   m_AdvancedMode: 0
   postExposure:
     m_OverrideState: 1
-    m_Value: 0.1
+    m_Value: 0.3
   contrast:
     m_OverrideState: 1
-    m_Value: 36.9
+    m_Value: -22.2
     min: -100
     max: 100
   colorFilter:
@@ -388,6 +388,6 @@ MonoBehaviour:
     max: 180
   saturation:
     m_OverrideState: 1
-    m_Value: -10
+    m_Value: 18.1
     min: -100
     max: 100
