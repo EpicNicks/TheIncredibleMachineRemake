@@ -10,4 +10,9 @@ public class WinScreenScript : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
+
+    public void LoadLevel(string level)
+    {
+        SceneManager.LoadScene(level);
+    }
 }

@@ -10,16 +10,22 @@ public class ElevatorPlace : Placeable
     // Start is called before the first frame update
     private void Start() {
         base.OnStart();
-        GetComponent<AudioSource>().playOnAwake = false;
-        GetComponent<AudioSource>().clip = elevatorSound;
+        if (GetComponent<AudioSource>())
+        {
+            GetComponent<AudioSource>().playOnAwake = false;
+            GetComponent<AudioSource>().clip = elevatorSound;
+        }
     }
 
     private void LateUpdate() {
         base.OnLateUpdate();
     }
 
-    private void onCollision()
+    private void OnCollisionEnter()
     {
-        GetComponent<AudioSource>().Play();
+        if (GetComponent<AudioSource>())
+        {
+            GetComponent<AudioSource>().Play();
+        }
     }
 }
