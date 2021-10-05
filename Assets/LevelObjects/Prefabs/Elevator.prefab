@@ -229,7 +229,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactable: 0
   pulseSpeed: 1
-  tubePivot: {fileID: 3829767200526289951}
+  tubePivot: {fileID: 0}
   collisionTags:
   - Player
   delaySeconds: 0
