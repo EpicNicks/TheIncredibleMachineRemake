@@ -2072,11 +2072,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5743489776776873025, guid: 12aa87748e4e825468e933949111904c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -27.05
+      value: -40
       objectReference: {fileID: 0}
     - target: {fileID: 5743489776776873025, guid: 12aa87748e4e825468e933949111904c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.87
+      value: -25
       objectReference: {fileID: 0}
     - target: {fileID: 5743489776776873025, guid: 12aa87748e4e825468e933949111904c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2112,11 +2112,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5743489776776873026, guid: 12aa87748e4e825468e933949111904c, type: 3}
       propertyPath: gridPointsBounds.x
-      value: 55
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 5743489776776873026, guid: 12aa87748e4e825468e933949111904c, type: 3}
       propertyPath: gridPointsBounds.y
-      value: 25
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 5743489776776873026, guid: 12aa87748e4e825468e933949111904c, type: 3}
       propertyPath: gridPointSphereRadius
