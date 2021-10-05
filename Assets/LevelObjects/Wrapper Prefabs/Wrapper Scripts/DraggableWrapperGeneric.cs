@@ -23,9 +23,7 @@ public class DraggableWrapperGeneric : MonoBehaviour
         }
         if (col == null)
         {
-            col = GetComponent<Collider>();
-            if (col == null)
-                col = GetComponentInChildren<Collider>();
+            col = GetComponentInChildren<Collider>();
         }
     }
 
