@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ToyboxToggle : MonoBehaviour
 {
@@ -7,6 +8,10 @@ public class ToyboxToggle : MonoBehaviour
 
     public RectTransform buttonTransform;
     public RectTransform toyboxPanelTransform;
+
+    public Sprite leftArrow;
+    public Sprite rightArrow;
+    private Image myIMGComponent;
 
     private void Awake()
     {
@@ -35,10 +40,14 @@ public class ToyboxToggle : MonoBehaviour
         if (isVisible)
         {
             toyboxPanelTransform.localPosition += startPos;
+            myIMGComponent = this.GetComponent<Image>();
+            myIMGComponent.sprite = leftArrow;
         }
         else
         {
             toyboxPanelTransform.localPosition -= startPos;
+            myIMGComponent = this.GetComponent<Image>();
+            myIMGComponent.sprite = rightArrow;
         }
         isVisible = !isVisible;
     }
