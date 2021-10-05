@@ -57,6 +57,7 @@ public class GravityField : Placeable
     {
         base.OnStart();
         GetComponent<AudioSource>().loop = false;
+        GetComponent<AudioSource>().volume = 0.06f;
         if (audioSource.clip)
         {
             audioSource.Play();
