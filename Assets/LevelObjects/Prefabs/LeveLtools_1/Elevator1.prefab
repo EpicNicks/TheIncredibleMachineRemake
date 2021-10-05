@@ -181,7 +181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactable: 0
   pulseSpeed: 1
-  tubePivot: {fileID: 4296943702200767021}
+  tubePivot: {fileID: 0}
   collisionTags:
   - Player
   delaySeconds: 0
