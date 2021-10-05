@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Seesaw : Placeable
+public class Seesaw : Placeable 
 {
     private void Start() {
         base.OnStart();
