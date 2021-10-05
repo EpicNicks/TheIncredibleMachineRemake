@@ -123,7 +123,7 @@ public class ElevatorMove : Placeable
             rbod.MovePosition(Vector3.Lerp(startPoint, target, timeElapsed / timeToMove));
             if (tubePivot)
             {
-                tubePivot.transform.localScale = Vector3.Lerp(originalTubeScale, originalTubeScale + SCALING_FACTOR * new Vector3(0, target.y, 0), timeElapsed / timeToMove);
+                tubePivot.transform.localScale = Vector3.Lerp(originalTubeScale, originalTubeScale + new Vector3(0, 1f / 1.7f * target.y - tubePivot.transform.position.y, 0), timeElapsed / timeToMove);
             }
             timeElapsed += Time.deltaTime;
             yield return null;

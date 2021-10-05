@@ -11,14 +11,4 @@ public class GridPoint : MonoBehaviour
             placedObject = value;
         }
     }
-
-    private void Start()
-    {
-        
-    }
-
-    private void Update()
-    {
-        
-    }
 }

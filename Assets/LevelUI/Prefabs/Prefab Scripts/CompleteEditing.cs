@@ -73,16 +73,15 @@ public class CompleteEditing : MonoBehaviour
 
     public void FinishedEditing()
     {
-        player.GetComponent<Rigidbody>().constraints |= RigidbodyConstraints.FreezePositionZ;
-        if (starter)
-        {
-            starter.GetComponent<Rigidbody>().constraints |= RigidbodyConstraints.FreezePositionZ;
-        }
-
         Rigidbody[] rbods = FindObjectsOfType<Rigidbody>();
         foreach (var rbod in rbods)
         {
             rbod.constraints &= ~RigidbodyConstraints.FreezePosition;
+        }
+        player.GetComponent<Rigidbody>().constraints |= RigidbodyConstraints.FreezePositionZ;
+        if (starter)
+        {
+            starter.GetComponent<Rigidbody>().constraints |= RigidbodyConstraints.FreezePositionZ;
         }
         finishedEditingHandler?.Invoke(this, EventArgs.Empty);
         foreach (var placeable in FindObjectsOfType<Placeable>())
