@@ -137,7 +137,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 167019918789462772}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78802587c2f1eff4bb1d93a46cea591d, type: 3}
   m_Name: 
@@ -173,15 +173,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3636154277148151384, guid: 0ece7081e368ec44fa87ae482696f0df, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.9315
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3636154277148151384, guid: 0ece7081e368ec44fa87ae482696f0df, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.631791
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3636154277148151384, guid: 0ece7081e368ec44fa87ae482696f0df, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.0000017321825
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3636154277148151384, guid: 0ece7081e368ec44fa87ae482696f0df, type: 3}
       propertyPath: m_LocalRotation.w
@@ -211,6 +211,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 5376983955782066820, guid: 0ece7081e368ec44fa87ae482696f0df, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.21
+      objectReference: {fileID: 0}
     - target: {fileID: 6841632775541358696, guid: 0ece7081e368ec44fa87ae482696f0df, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -225,11 +229,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6841632775541358696, guid: 0ece7081e368ec44fa87ae482696f0df, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 46.16
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6841632775541358696, guid: 0ece7081e368ec44fa87ae482696f0df, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.269
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6841632775541358696, guid: 0ece7081e368ec44fa87ae482696f0df, type: 3}
       propertyPath: m_LocalPosition.z
@@ -267,7 +271,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: VerticalSeeSaw
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2054833310365960168, guid: 0ece7081e368ec44fa87ae482696f0df, type: 3}
+    - {fileID: 6936407969664469454, guid: 0ece7081e368ec44fa87ae482696f0df, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0ece7081e368ec44fa87ae482696f0df, type: 3}
 --- !u!4 &5515243321632715641 stripped
 Transform:
