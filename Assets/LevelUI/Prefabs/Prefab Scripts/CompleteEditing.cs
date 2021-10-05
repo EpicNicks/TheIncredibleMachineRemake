@@ -45,6 +45,8 @@ public class CompleteEditing : MonoBehaviour
             Rigidbody starterbody = starter.GetComponent<Rigidbody>();
             starterbody.velocity = Vector3.zero;
             starterbody.angularVelocity = Vector3.zero;
+
+            starter.SetActive(true);
         }
 
         Rigidbody[] rbods = FindObjectsOfType<Rigidbody>();
@@ -73,16 +75,15 @@ public class CompleteEditing : MonoBehaviour
 
     public void FinishedEditing()
     {
-        player.GetComponent<Rigidbody>().constraints |= RigidbodyConstraints.FreezePositionZ;
-        if (starter)
-        {
-            starter.GetComponent<Rigidbody>().constraints |= RigidbodyConstraints.FreezePositionZ;
-        }
-
         Rigidbody[] rbods = FindObjectsOfType<Rigidbody>();
         foreach (var rbod in rbods)
         {
             rbod.constraints &= ~RigidbodyConstraints.FreezePosition;
+        }
+        player.GetComponent<Rigidbody>().constraints |= RigidbodyConstraints.FreezePositionZ;
+        if (starter)
+        {
+            starter.GetComponent<Rigidbody>().constraints |= RigidbodyConstraints.FreezePositionZ;
         }
         finishedEditingHandler?.Invoke(this, EventArgs.Empty);
         foreach (var placeable in FindObjectsOfType<Placeable>())

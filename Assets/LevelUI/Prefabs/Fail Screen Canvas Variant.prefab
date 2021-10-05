@@ -31,6 +31,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: FallScreenScript, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 2383327458023354989, guid: d0231e070ba2c4b4e9a9eb69eb6b8064, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4ef2aed39a2be4650bbedf539335b1c7, type: 3}
     - target: {fileID: 2383327458023354990, guid: d0231e070ba2c4b4e9a9eb69eb6b8064, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -18.8
