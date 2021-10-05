@@ -93,6 +93,8 @@ MonoBehaviour:
   fireCooldownSeconds: 1
   onCollisionFireCooldownSeconds: 0.5
   bulletPrefab: {fileID: 8813292502521872086, guid: 375e5a00d786a5748987186c13e04e8a, type: 3}
+  muzzleFlash: {fileID: 3964530679979121420, guid: 43a23b56173ca0f4e8130baa1f10284a, type: 3}
+  muzzleFlashSpawnTransform: {fileID: 3964530679979121411, guid: 43a23b56173ca0f4e8130baa1f10284a, type: 3}
 --- !u!33 &4589238269085973750
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -141,7 +143,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4589238270618421974}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0, z: 0}
+  m_LocalPosition: {x: 1.9, y: 0.13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4589238269085973751}
