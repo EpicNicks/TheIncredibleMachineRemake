@@ -13,6 +13,7 @@ public class BoxingGlove : Placeable
     private Vector3 startpoint;
     private Rigidbody rbod;
     private AudioSource audioSource;
+    private Animator boxAnimator;
 
     [Tooltip("The destination the boxing glove will complete the punch at.")]
     public Vector3 punchDisplacement;
@@ -62,6 +63,7 @@ public class BoxingGlove : Placeable
 
     private void Start()
     {
+        boxAnimator = GetComponentInChildren<Animator>();
         base.OnStart();
         startpoint = transform.position;
         nextPunchDelaySeconds = punchInitialDelaySeconds;
