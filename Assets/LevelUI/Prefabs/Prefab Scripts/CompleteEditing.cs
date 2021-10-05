@@ -45,6 +45,8 @@ public class CompleteEditing : MonoBehaviour
             Rigidbody starterbody = starter.GetComponent<Rigidbody>();
             starterbody.velocity = Vector3.zero;
             starterbody.angularVelocity = Vector3.zero;
+
+            starter.SetActive(true);
         }
 
         Rigidbody[] rbods = FindObjectsOfType<Rigidbody>();
