@@ -15,9 +15,10 @@ GameObject:
   - component: {fileID: 167019918789462775}
   - component: {fileID: 2183671636350922181}
   - component: {fileID: 5686447075460103561}
+  - component: {fileID: 2048924749468433804}
   m_Layer: 0
   m_Name: Seesaw_vertical
-  m_TagString: Untagged
+  m_TagString: Trigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,7 +93,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 167019918789462772}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 86b75b87835ee6149ba8fd65b24ff8fc, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -112,7 +113,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 94
+  m_Constraints: 62
   m_CollisionDetection: 0
 --- !u!114 &2183671636350922181
 MonoBehaviour:
@@ -146,3 +147,15 @@ MonoBehaviour:
   gridGenerator: {fileID: 0}
   toyDrawerSelector: {fileID: 0}
   placeable: {fileID: 2183671636350922181}
+--- !u!114 &2048924749468433804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167019918789462772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c768bbbf07c5b64f979d933f4797b9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
