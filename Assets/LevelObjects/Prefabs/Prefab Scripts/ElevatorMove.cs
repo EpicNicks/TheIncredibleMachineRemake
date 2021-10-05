@@ -8,6 +8,7 @@ using UnityEngine;
 [RequireComponent(typeof(Animator))]
 public class ElevatorMove : Placeable
 {
+    private const float SCALING_FACTOR = 1.2f;
     /*
      * strictly private fields
      */
@@ -20,6 +21,8 @@ public class ElevatorMove : Placeable
     /*
      * Editor Fields
      */
+    [SerializeField]
+    private GameObject tubePivot;
     [SerializeField]
     private List<string> collisionTags = new List<string> { "Player" };
     [SerializeField]
@@ -108,11 +111,20 @@ public class ElevatorMove : Placeable
             audioSource.Play();
         }
         Vector3 startPoint = transform.position;
+        Vector3 originalTubeScale = Vector3.one;
+        if (tubePivot)
+        {
+            originalTubeScale = tubePivot.transform.localScale;
+        }
         yield return new WaitForSeconds(pauseBefore);
         float timeElapsed = 0.0f;
         while (!Mathf.Approximately(transform.position.magnitude, target.magnitude))
         {
             rbod.MovePosition(Vector3.Lerp(startPoint, target, timeElapsed / timeToMove));
+            if (tubePivot)
+            {
+                tubePivot.transform.localScale = Vector3.Lerp(originalTubeScale, originalTubeScale + SCALING_FACTOR * new Vector3(0, target.y, 0), timeElapsed / timeToMove);
+            }
             timeElapsed += Time.deltaTime;
             yield return null;
         }
