@@ -10,5 +10,8 @@ This project features placing moving objects in puzzle levels to move the ball t
 <b>UI/UX Designer, UI Programmer</b>: Xinyang "Ian" Wang<br>
 <b>2D and UI Artist, Music Composer</b>: Lukas Radlin<br>
 
+## Links to builds
+[Final build](https://github.com/EpicNicks/TheIncredibleMachineRemake/releases/tag/build)
+
 ## Link to build on itch.io
 https://avanic-insanity.itch.io/toy-mania
