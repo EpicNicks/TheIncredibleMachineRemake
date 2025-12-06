@@ -36,14 +36,14 @@ public class CompleteEditing : MonoBehaviour
     {
         player.transform.position = playerStartPos;
         Rigidbody playerBody = player.GetComponent<Rigidbody>();
-        playerBody.velocity = Vector3.zero;
+        playerBody.linearVelocity = Vector3.zero;
         playerBody.angularVelocity = Vector3.zero;
         
         if (starter)
         {
             starter.transform.position = starterPos;
             Rigidbody starterbody = starter.GetComponent<Rigidbody>();
-            starterbody.velocity = Vector3.zero;
+            starterbody.linearVelocity = Vector3.zero;
             starterbody.angularVelocity = Vector3.zero;
 
             starter.SetActive(true);
@@ -54,10 +54,10 @@ public class CompleteEditing : MonoBehaviour
         {
             rbod.constraints |= RigidbodyConstraints.FreezePosition;
         }
-        player.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        player.GetComponent<Rigidbody>().linearVelocity = Vector3.zero;
         if (starter)
         {
-            starter.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            starter.GetComponent<Rigidbody>().linearVelocity = Vector3.zero;
         }
         foreach (var placeable in FindObjectsOfType<Placeable>())
         {
